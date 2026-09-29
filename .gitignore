@@ -1,0 +1,27 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+
+export/
+exports/
+build/
+
+.vscode/
+.vs/
+.idea/
+
+.DS_Store
+Thumbs.db
+/android/
+
+bin/
+obj/
+
+*.user
+*.userprefs
+*.suo
+*.csproj.user
+
+*.log
+*.temp
+*.tmp

@@ -1,0 +1,493 @@
+{
+	"connections": [
+		{
+			"from": "normal_map2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "hbao",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "invert",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 6
+		},
+		{
+			"from": "reroute",
+			"from_port": 0,
+			"to": "hbao",
+			"to_port": 0
+		},
+		{
+			"from": "reroute",
+			"from_port": 0,
+			"to": "normal_map2",
+			"to_port": 0
+		},
+		{
+			"from": "reroute",
+			"from_port": 0,
+			"to": "invert",
+			"to_port": 0
+		},
+		{
+			"from": "fbm4",
+			"from_port": 0,
+			"to": "bricks",
+			"to_port": 0
+		},
+		{
+			"from": "bricks",
+			"from_port": 1,
+			"to": "fill_to_gradient",
+			"to_port": 0
+		},
+		{
+			"from": "voronoi2",
+			"from_port": 0,
+			"to": "tonality",
+			"to_port": 0
+		},
+		{
+			"from": "tonality",
+			"from_port": 0,
+			"to": "warp",
+			"to_port": 1
+		},
+		{
+			"from": "bricks",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 0
+		},
+		{
+			"from": "fill_to_gradient",
+			"from_port": 0,
+			"to": "warp",
+			"to_port": 0
+		},
+		{
+			"from": "warp",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		},
+		{
+			"from": "uniform",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 0
+		},
+		{
+			"from": "uniform_2",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 1
+		},
+		{
+			"from": "bricks",
+			"from_port": 0,
+			"to": "tones_step",
+			"to_port": 0
+		},
+		{
+			"from": "fill",
+			"from_port": 0,
+			"to": "fill_to_random_grey",
+			"to_port": 0
+		},
+		{
+			"from": "invert_2",
+			"from_port": 0,
+			"to": "fill",
+			"to_port": 0
+		},
+		{
+			"from": "fill_to_random_grey",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 3
+		},
+		{
+			"from": "tones_step",
+			"from_port": 0,
+			"to": "invert_2",
+			"to_port": 0
+		},
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "reroute",
+			"to_port": 0
+		},
+		{
+			"from": "blend2_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "_Node_3508",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 613.399597167969,
+				"y": 68.8948974609375
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 11.0,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "bricks",
+			"node_position": {
+				"x": -1464.20080566406,
+				"y": 17.0247421264648
+			},
+			"parameters": {
+				"bevel": 0.11,
+				"columns": 3.0,
+				"corner": 0.32,
+				"mortar": 0.08,
+				"pattern": 0.0,
+				"repeat": 1.0,
+				"round": 0.18,
+				"row_offset": 0.25,
+				"rows": 6.0
+			},
+			"seed_int": 0,
+			"type": "bricks3"
+		},
+		{
+			"name": "normal_map2",
+			"node_position": {
+				"x": 203.658706665039,
+				"y": -85.804931640625
+			},
+			"parameters": {
+				"buffer": 1.0,
+				"param2": 0.0,
+				"size": 10.0,
+				"strength": 0.78
+			},
+			"seed_int": 0,
+			"type": "normal_map2"
+		},
+		{
+			"name": "invert",
+			"node_position": {
+				"x": 251.719757080078,
+				"y": 362.617645263672
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"type": "invert"
+		},
+		{
+			"name": "hbao",
+			"node_position": {
+				"x": 185.618041992188,
+				"y": 129.151397705078
+			},
+			"parameters": {
+				"param0": 10.0,
+				"param1": 0.1,
+				"param2": 15.0,
+				"param3": 0.08,
+				"param4": 4.0,
+				"param5": 1.0
+			},
+			"seed_int": 0,
+			"type": "hbao"
+		},
+		{
+			"name": "reroute",
+			"node_position": {
+				"x": 7.6232385635376,
+				"y": 161.43342590332
+			},
+			"parameters": {
+				"preview": 0.0
+			},
+			"seed": 47366.0,
+			"type": "reroute"
+		},
+		{
+			"name": "fbm4",
+			"node_position": {
+				"x": -1847.56188964844,
+				"y": 80.4131469726562
+			},
+			"parameters": {
+				"folds": 0.0,
+				"iterations": 5.0,
+				"lacunarity": 2.0,
+				"noise": 3.0,
+				"offset": 0.0,
+				"persistence": 0.5,
+				"scale_x": 2.0,
+				"scale_y": 2.0
+			},
+			"seed_int": 0,
+			"type": "fbm4"
+		},
+		{
+			"name": "fill_to_gradient",
+			"node_position": {
+				"x": -1072.47570800781,
+				"y": 147.814025878906
+			},
+			"parameters": {
+				"grad": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.618481106228299,
+							"r": 1.0
+						}
+					],
+					"type": "Gradient"
+				},
+				"layers": 1.0,
+				"mode": 0.0,
+				"r_offset": 0.86,
+				"r_rotate": 217.28,
+				"rotate": 98.18
+			},
+			"seed_int": 0,
+			"type": "fill_to_gradient2"
+		},
+		{
+			"generic_size": 1,
+			"name": "warp",
+			"node_position": {
+				"x": -769.249267578125,
+				"y": 248.413986206055
+			},
+			"parameters": {
+				"amount": 0.1,
+				"eps": 0.1,
+				"mode": 0.0
+			},
+			"seed_int": 0,
+			"type": "warp"
+		},
+		{
+			"name": "voronoi2",
+			"node_position": {
+				"x": -1474.42028808594,
+				"y": 386.815551757812
+			},
+			"parameters": {
+				"intensity": 1.0,
+				"randomness": 0.85,
+				"scale_x": 8.0,
+				"scale_y": 8.0,
+				"stretch_x": 1.0,
+				"stretch_y": 1.0
+			},
+			"seed_int": 0,
+			"type": "voronoi2"
+		},
+		{
+			"generic_size": 1,
+			"name": "tonality",
+			"node_position": {
+				"x": -1173.05407714844,
+				"y": 404.966003417969
+			},
+			"parameters": {
+				"curve": {
+					"points": [
+						{
+							"ls": 0.143212988236982,
+							"rs": 0.143212988236982,
+							"x": 0.0,
+							"y": 0.0
+						},
+						{
+							"ls": 1.0,
+							"rs": 0.0,
+							"x": 1.0,
+							"y": 1.0
+						}
+					],
+					"type": "Curve"
+				}
+			},
+			"seed_int": 0,
+			"type": "tonality"
+		},
+		{
+			"generic_size": 2,
+			"name": "blend2",
+			"node_position": {
+				"x": -456.929382324219,
+				"y": 32.8639831542969
+			},
+			"parameters": {
+				"amount1": 0.34,
+				"amount2": 0.22,
+				"blend_type1": 2.0,
+				"blend_type2": 2.0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"generic_size": 2,
+			"name": "blend2_2",
+			"node_position": {
+				"x": -308.123199462891,
+				"y": -263.157653808594
+			},
+			"parameters": {
+				"amount1": 0.27,
+				"amount2": 0.38,
+				"blend_type1": 0.0,
+				"blend_type2": 0.0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "uniform",
+			"node_position": {
+				"x": -959.269165039062,
+				"y": -404.253265380859
+			},
+			"parameters": {
+				"color": {
+					"a": 1.0,
+					"b": 0.05035400390625,
+					"g": 0.0886102318763733,
+					"r": 0.5859375,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
+		},
+		{
+			"name": "uniform_2",
+			"node_position": {
+				"x": -954.206909179688,
+				"y": -312.070159912109
+			},
+			"parameters": {
+				"color": {
+					"a": 1.0,
+					"b": 0.255081176757812,
+					"g": 0.263769537210464,
+					"r": 0.28515625,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
+		},
+		{
+			"name": "tones_step",
+			"node_position": {
+				"x": -1290.07202148438,
+				"y": -289.631164550781
+			},
+			"parameters": {
+				"invert": false,
+				"value": 0.28,
+				"width": 0.33
+			},
+			"seed_int": 0,
+			"type": "tones_step"
+		},
+		{
+			"name": "fill",
+			"node_position": {
+				"x": -848.5556640625,
+				"y": -116.315498352051
+			},
+			"parameters": {
+				"adjust": 0.0,
+				"remove_edges": 0.0,
+				"size": 8.0
+			},
+			"seed_int": 0,
+			"type": "fill2"
+		},
+		{
+			"name": "fill_to_random_grey",
+			"node_position": {
+				"x": -626.951416015625,
+				"y": -112.883987426758
+			},
+			"parameters": {
+				"edgecolor": 1.0
+			},
+			"seed_int": 0,
+			"type": "fill_to_random_grey2"
+		},
+		{
+			"name": "invert_2",
+			"node_position": {
+				"x": -983.613159179688,
+				"y": -132.65087890625
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"type": "invert"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
