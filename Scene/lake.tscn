@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b364lqmvtrmhq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_beaib"]
+size = Vector2(100, 100)
+subdivide_width = 100
+subdivide_depth = 100
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xb22j"]
+
+[node name="Lake" type="Node3D" unique_id=1075831370]
+
+[node name="surface" type="MeshInstance3D" parent="." unique_id=1032163843]
+mesh = SubResource("PlaneMesh_beaib")
+surface_material_override/0 = SubResource("ShaderMaterial_xb22j")

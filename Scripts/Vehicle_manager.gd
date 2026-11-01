@@ -1,35 +1,109 @@
+
 extends Node
 
-var character: CharacterBody3D
-var vehicle: VehicleBody3D
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var character: CharacterBody3D = null
+var vehicle: RigidBody3D = null
 
-#area3d -> Vehicle_manager ==>enter_vehicle
-func enter_vehicle()->void:
-	if not character or not vehicle:
+@export var character_collision_path: NodePath = ^"CollisionShape3D"
+@export var character_camera_path: NodePath = ^"CameraPivot/car_cam"
+@export var vehicle_camera_path: NodePath = ^"SpringArm3D/car_cam"
+@export var vehicle_exit_path: NodePath = ^"Exit_point"
+
+
+func enter_vehicle() -> void:
+	if not is_instance_valid(character):
+		push_warning("VehicleManager: Character is missing.")
 		return
-	character.is_active=false
-	character.visible=false
-	character.get_node("/root/Node3D/Rob/CollisionShape3D").disabled=true
-	character.get_node("/root/Node3D/Rob/CameraPivot/car_cam").current=false
-	
-	vehicle.is_active=true
-	vehicle.get_node("/root/Node3D/Player/CameraPivot/car_cam").current=true
-	
-	
-func exit_vehicle():
-	vehicle.is_active=false
-	vehicle.get_node("/root/Node3D/Player/CameraPivot/car_cam").current=false
-	character.global_position=vehicle.get_node("Exit_point").global_position
-	character.rotation.y=vehicle.rotation.y
-	
-	character.visible=true
-	character.get_node("/root/Node3D/Rob/CollisionShape3D").disabled=false
-	character.is_active=true
-	character.get_node("/root/Node3D/Rob/CameraPivot/car_cam").current=true
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+	if not is_instance_valid(vehicle):
+		push_warning("VehicleManager: Vehicle is missing.")
+		return
+
+	if not bool(character.get("is_active")):
+		return
+
+	if bool(vehicle.get("is_active")):
+		return
+
+	# Stop and hide the character.
+	character.velocity = Vector3.ZERO
+	character.set("is_active", false)
+	character.visible = false
+
+	var collision := character.get_node_or_null(
+		character_collision_path
+	) as CollisionShape3D
+
+	if collision:
+		collision.set_deferred("disabled", true)
+
+	# Switch cameras.
+	var character_camera := character.get_node_or_null(
+		character_camera_path
+	) as Camera3D
+
+	if character_camera:
+		character_camera.current = false
+
+	vehicle.set("is_active", true)
+	vehicle.sleeping = false
+
+	var car_camera := vehicle.get_node_or_null(
+		vehicle_camera_path
+	) as Camera3D
+
+	if car_camera:
+		car_camera.current = true
+
+
+func exit_vehicle() -> void:
+	if not is_instance_valid(character):
+		return
+
+	if not is_instance_valid(vehicle):
+		return
+
+	if not bool(vehicle.get("is_active")):
+		return
+
+	vehicle.set("is_active", false)
+
+	var car_camera := vehicle.get_node_or_null(
+		vehicle_camera_path
+	) as Camera3D
+
+	if car_camera:
+		car_camera.current = false
+
+	# Move the character to the exit point.
+	var exit_point := vehicle.get_node_or_null(
+		vehicle_exit_path
+	) as Node3D
+
+	if exit_point:
+		character.global_position = exit_point.global_position
+	else:
+		character.global_position = (
+			vehicle.global_position
+			+ vehicle.global_transform.basis.x * 2.0
+		)
+
+	character.global_rotation.y = vehicle.global_rotation.y
+	character.velocity = Vector3.ZERO
+	character.visible = true
+
+	var collision := character.get_node_or_null(
+		character_collision_path
+	) as CollisionShape3D
+
+	if collision:
+		collision.set_deferred("disabled", false)
+
+	character.set("is_active", true)
+
+	var character_camera := character.get_node_or_null(
+		character_camera_path
+	) as Camera3D
+
+	if character_camera:
+		character_camera.current = true

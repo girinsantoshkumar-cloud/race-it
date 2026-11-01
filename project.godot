@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Race_it"
 run/main_scene="uid://iw1hqoeg1wv5"
-config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,6 +21,8 @@ VehicleManager="*uid://cmxkgl70hhp84"
 
 [display]
 
+window/size/mode=3
+window/hdr/request_hdr_output=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -30,7 +32,7 @@ project/assembly_name="Race_it"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
+enabled=PackedStringArray("res://addons/sky_3d/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
 
 [input]
 
@@ -67,6 +69,21 @@ hand_brake={
 interact={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+parking_hand_brake={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+sprint={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+"Weapon wheel"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":71,"key_label":0,"unicode":103,"location":0,"echo":false,"script":null)
 ]
 }
 

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://lrsptpxx2ano"]
+
+[ext_resource type="PackedScene" uid="uid://wujndga3hoex" path="res://Assets/Interactables/gun.glb" id="1_vk1bi"]
+
+[node name="gun" unique_id=2079733706 instance=ExtResource("1_vk1bi")]

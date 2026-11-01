@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bh7jrosbm3snj"]
+
+[ext_resource type="PackedScene" uid="uid://b0mh6wncja17j" path="res://Assets/Interactables/Bat.glb" id="1_pb2o4"]
+
+[node name="Bat" unique_id=1447945928 instance=ExtResource("1_pb2o4")]
