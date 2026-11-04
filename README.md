@@ -44,3 +44,4 @@ The game is currently underdevelopment and actively maintained by a solo develop
 - [✓] Enemy AI baseline and with character models
 - [x] Full survival scavenging loop & inventory system
 - [x] Polishing zombie AI encounters & island bosses/abilities
+
