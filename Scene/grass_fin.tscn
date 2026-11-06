@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://qw3rfv1y2db4"]
+
+[ext_resource type="PackedScene" uid="uid://v2gdpxjvh2at" path="res://Assets/Landscape/ground_materials/grass_fin.glb" id="1_2b03u"]
+
+[node name="grass_fin" unique_id=622040209 instance=ExtResource("1_2b03u")]

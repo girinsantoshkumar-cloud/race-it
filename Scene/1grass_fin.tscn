@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cewoii87juk87"]
+
+[ext_resource type="PackedScene" uid="uid://v2gdpxjvh2at" path="res://Assets/Landscape/ground_materials/grass_fin.glb" id="1_15mc1"]
+[ext_resource type="ArrayMesh" uid="uid://1qor0yb0adbd" path="res://Scene/back_up_grass.tres" id="2_pgqlm"]
+
+[node name="grass_fin" unique_id=622040209 instance=ExtResource("1_15mc1")]
+
+[node name="Plane_017" parent="." index="0" unique_id=444495958]
+mesh = ExtResource("2_pgqlm")

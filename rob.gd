@@ -22,6 +22,13 @@ signal died
 @export var show_number := true
 @export var heartbeat := true
 
+@export_group("Car icon (replaces the heart while driving)")
+@export var car_texture: Texture2D             # drag your car PNG here
+@export var car_icon_width := 230.0            # height follows the image proportions
+@export var car_full_color := Color(0.35, 1.0, 0.35)
+@export var car_mid_color := Color(1.0, 0.85, 0.2)
+@export var car_low_color := Color(1.0, 0.2, 0.15)
+
 @export_group("Bar")
 @export var bar_height := 16.0
 @export var bar_gap := 8.0
@@ -55,6 +62,8 @@ var _trail_wait := 0.0
 
 var _heart: HeartDisplay
 var _bar: BarDisplay
+var _car_display: CarDisplay
+var _car_label: Label
 var _flash: ColorRect
 var _label: Label
 var _death_label: Label
@@ -65,6 +74,12 @@ var _drip_top: CPUParticles2D
 var _burst_top: CPUParticles2D
 var _heart_mat: ShaderMaterial
 var _bar_mat: ShaderMaterial
+
+var _car: Node = null
+var _car_shown := 1.0
+var _car_trail := 1.0
+var _car_wait := 0.0
+var _car_prev := 1.0
 
 
 class HeartDisplay extends Control:
@@ -103,6 +118,30 @@ class HeartDisplay extends Control:
 		if trail > shown:
 			_fill(trail, Color(1.0, 0.85, 0.85, 0.55))
 		_fill(shown, Color.WHITE)
+
+
+# car icon: fills left to right with the car's health
+class CarDisplay extends Control:
+	var shown := 1.0
+	var trail := 1.0
+	var tex: Texture2D
+	var tint := Color.WHITE
+
+	func _fill(r: float, col: Color) -> void:
+		if r <= 0.0 or tex == null:
+			return
+		var ts := tex.get_size()
+		draw_texture_rect_region(tex,
+			Rect2(0.0, 0.0, size.x * r, size.y),
+			Rect2(0.0, 0.0, ts.x * r, ts.y), col)
+
+	func _draw() -> void:
+		if tex == null:
+			return
+		draw_texture_rect(tex, Rect2(Vector2.ZERO, size), false, Color(0.12, 0.1, 0.1, 0.75))
+		if trail > shown:
+			_fill(trail, Color(1.0, 0.85, 0.85, 0.6))
+		_fill(shown, tint)
 
 
 class BarDisplay extends Control:
@@ -217,6 +256,71 @@ func _process(delta: float) -> void:
 	var bleeding := (not is_dead) and ratio <= drip_below and ratio > 0.0
 	_drip.emitting = bleeding
 	_drip_top.emitting = bleeding
+
+	_update_car_icon(delta)
+
+
+# While Rob drives a car: hide the heart, show the car icon in the same spot.
+# Rob's red health bar stays visible the whole time.
+func _update_car_icon(delta: float) -> void:
+	if _car_display == null:
+		return
+
+	var car := _find_driven_car()
+	if car != _car:
+		_car = car
+		if _car:
+			_car_shown = _car_ratio(_car)
+			_car_trail = _car_shown
+			_car_prev = _car_shown
+
+	var driving := _car != null and not is_dead
+	_heart.visible = not driving
+	_car_display.visible = driving
+	if not driving:
+		return
+
+	var r := _car_ratio(_car)
+	if r < _car_prev - 0.0001:
+		_car_wait = trail_delay
+	_car_prev = r
+
+	_car_shown = move_toward(_car_shown, r, fill_speed * delta)
+	if _car_trail < _car_shown:
+		_car_trail = _car_shown
+	elif _car_trail > _car_shown:
+		if _car_wait > 0.0:
+			_car_wait -= delta
+		else:
+			_car_trail = move_toward(_car_trail, _car_shown, trail_speed * delta)
+
+	_car_display.shown = _car_shown
+	_car_display.trail = _car_trail
+	_car_display.tint = _car_tint(_car_shown)
+	_car_display.queue_redraw()
+
+	if show_number:
+		var mh: float = float(_car.get("max_health"))
+		_car_label.text = "%d" % int(ceil(_car_shown * mh))
+
+
+func _find_driven_car() -> Node:
+	for c in get_tree().get_nodes_in_group("car"):
+		if "health" in c and "is_active" in c and bool(c.get("is_active")):
+			return c
+	return null
+
+
+func _car_ratio(c: Node) -> float:
+	var m: float = maxf(float(c.get("max_health")), 0.001)
+	return clampf(float(c.get("health")) / m, 0.0, 1.0)
+
+
+func _car_tint(f: float) -> Color:
+	if f < 0.5:
+		return car_low_color.lerp(car_mid_color, clampf(f * 2.0, 0.0, 1.0))
+	return car_mid_color.lerp(car_full_color, clampf((f - 0.5) * 2.0, 0.0, 1.0))
+
 
 func take_damage(amount: float = 10.0) -> void:
 	if is_dead:
@@ -438,6 +542,8 @@ func _build_hud() -> void:
 
 	_build_blood(_heart, w, h)
 
+	_build_car_icon(layer, heart_top, heart_bottom, h)
+
 	_death_label = Label.new()
 	_death_label.text = "YOU DIED"
 	_death_label.visible = false
@@ -448,6 +554,44 @@ func _build_hud() -> void:
 	_death_label.add_theme_font_size_override("font_size", 72)
 	_death_label.add_theme_color_override("font_color", Color(0.75, 0.05, 0.05))
 	layer.add_child(_death_label)
+
+
+# car icon sits in the same spot as the heart (left aligned with the bar)
+func _build_car_icon(layer: CanvasLayer, heart_top: float, heart_bottom: float, heart_h: float) -> void:
+	if car_texture == null:
+		return
+	var ts := car_texture.get_size()
+	var cw := car_icon_width
+	var ch := cw * ts.y / maxf(ts.x, 1.0)
+
+	# centred in the heart's slot when shorter than the heart, otherwise sits on the bar
+	var bottom := heart_bottom
+	if ch < heart_h:
+		bottom = heart_bottom - (heart_h - ch) * 0.5
+
+	_car_display = CarDisplay.new()
+	_car_display.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_car_display.tex = car_texture
+	_car_display.anchor_top = 1.0
+	_car_display.anchor_bottom = 1.0
+	_car_display.offset_left = heart_margin.x
+	_car_display.offset_right = heart_margin.x + cw
+	_car_display.offset_bottom = bottom
+	_car_display.offset_top = bottom - ch
+	_car_display.visible = false
+	layer.add_child(_car_display)
+
+	_car_label = Label.new()
+	_car_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_car_label.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_car_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_car_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_car_label.add_theme_font_size_override("font_size", int(ch * 0.4))
+	_car_label.add_theme_color_override("font_color", Color.WHITE)
+	_car_label.add_theme_color_override("font_outline_color", Color.BLACK)
+	_car_label.add_theme_constant_override("outline_size", 8)
+	_car_label.visible = show_number
+	_car_display.add_child(_car_label)
 
 func _update_hud() -> void:
 	if _heart == null:
