@@ -1,0 +1,3303 @@
+========== PROJECT INFORMATION ==========
+/home/santosh/race-it
+
+========== PROJECT FILE TREE ==========
+.
+├── addons
+│   ├── road-generator
+│   │   ├── connectors
+│   │   │   ├── terrain3d_road_connector.gd
+│   │   │   └── terrain3d_road_connector.gd.uid
+│   │   ├── custom_containers
+│   │   │   ├── src
+│   │   │   │   ├── .gdignore
+│   │   │   │   ├── intersections_source.blend
+│   │   │   │   └── README.md
+│   │   │   ├── 3way_1x1.glb
+│   │   │   ├── 3way_1x1.glb.import
+│   │   │   ├── 3way_1x1.tscn
+│   │   │   ├── 3way_2x2.glb
+│   │   │   ├── 3way_2x2.glb.import
+│   │   │   ├── 3way_2x2.tscn
+│   │   │   ├── 4way_1x1.glb
+│   │   │   ├── 4way_1x1.glb.import
+│   │   │   ├── 4way_1x1.tscn
+│   │   │   ├── 4way_2x2.glb
+│   │   │   ├── 4way_2x2.glb.import
+│   │   │   ├── 4way_2x2.tscn
+│   │   │   ├── highway_offramp.glb
+│   │   │   ├── highway_offramp.glb.import
+│   │   │   ├── highway_offramp.tscn
+│   │   │   ├── highway_onramp.glb
+│   │   │   ├── highway_onramp.glb.import
+│   │   │   ├── highway_onramp.tscn
+│   │   │   ├── roundabout_1x1.glb
+│   │   │   ├── roundabout_1x1.glb.import
+│   │   │   ├── roundabout_1x1.tscn
+│   │   │   ├── roundabout_2x2.glb
+│   │   │   ├── roundabout_2x2.glb.import
+│   │   │   ├── roundabout_2x2.tscn
+│   │   │   ├── splitter_1x1.glb
+│   │   │   ├── splitter_1x1.glb.import
+│   │   │   ├── splitter_1x1.tscn
+│   │   │   ├── splitter_2x2.glb
+│   │   │   ├── splitter_2x2.glb.import
+│   │   │   └── splitter_2x2.tscn
+│   │   ├── nodes
+│   │   │   ├── road_container.gd
+│   │   │   ├── road_container.gd.uid
+│   │   │   ├── road_graph_node.gd
+│   │   │   ├── road_graph_node.gd.uid
+│   │   │   ├── road_intersection.gd
+│   │   │   ├── road_intersection.gd.uid
+│   │   │   ├── road_lane_agent.gd
+│   │   │   ├── road_lane_agent.gd.uid
+│   │   │   ├── road_lane.gd
+│   │   │   ├── road_lane.gd.uid
+│   │   │   ├── road_manager.gd
+│   │   │   ├── road_manager.gd.uid
+│   │   │   ├── road_point.gd
+│   │   │   ├── road_point.gd.uid
+│   │   │   ├── road_segment.gd
+│   │   │   └── road_segment.gd.uid
+│   │   ├── procgen
+│   │   │   ├── intersection_ngon.gd
+│   │   │   ├── intersection_ngon.gd.uid
+│   │   │   ├── intersection_settings.gd
+│   │   │   ├── intersection_settings.gd.uid
+│   │   │   ├── segment_geo.gd
+│   │   │   └── segment_geo.gd.uid
+│   │   ├── resources
+│   │   │   ├── road_container.png
+│   │   │   ├── road_container.png.import
+│   │   │   ├── road_intersection.png
+│   │   │   ├── road_intersection.png.import
+│   │   │   ├── road_lane_agent.png
+│   │   │   ├── road_lane_agent.png.import
+│   │   │   ├── road_lane.png
+│   │   │   ├── road_lane.png.import
+│   │   │   ├── road_manager.png
+│   │   │   ├── road_manager.png.import
+│   │   │   ├── road_point.png
+│   │   │   ├── road_point.png.import
+│   │   │   ├── road_segment.png.import
+│   │   │   ├── road_texture@1x.png
+│   │   │   ├── road_texture@1x.png.import
+│   │   │   ├── road_texture@2x.png
+│   │   │   ├── road_texture@2x.png.import
+│   │   │   ├── road_texture@4x.png
+│   │   │   ├── road_texture@4x.png.import
+│   │   │   ├── road_texture.material
+│   │   │   ├── road_texture.png
+│   │   │   ├── road_texture.png.import
+│   │   │   ├── road_texture_template.afdesign
+│   │   │   ├── road_uv_grid.png
+│   │   │   ├── road_uv_grid.png.import
+│   │   │   └── road_uv.material
+│   │   ├── scene
+│   │   │   └── GizmoLaneIndicator.tscn
+│   │   ├── ui
+│   │   │   ├── connection_tool.gd
+│   │   │   ├── connection_tool.gd.uid
+│   │   │   ├── hidden_gizmo.gdshader
+│   │   │   ├── hidden_gizmo.gdshader.uid
+│   │   │   ├── hidden_gizmo_mat.tres
+│   │   │   ├── rc_submenu.gd
+│   │   │   ├── rc_submenu.gd.uid
+│   │   │   ├── road_container_edit.gd
+│   │   │   ├── road_container_edit.gd.uid
+│   │   │   ├── road_container_panel.gd
+│   │   │   ├── road_container_panel.gd.uid
+│   │   │   ├── road_container_panel.tscn
+│   │   │   ├── road_intersection_gizmo.gd
+│   │   │   ├── road_intersection_gizmo.gd.uid
+│   │   │   ├── road_point_edit.gd
+│   │   │   ├── road_point_edit.gd.uid
+│   │   │   ├── road_point_gizmo.gd
+│   │   │   ├── road_point_gizmo.gd.uid
+│   │   │   ├── road_point_panel.gd
+│   │   │   ├── road_point_panel.gd.uid
+│   │   │   ├── road_point_panel.tscn
+│   │   │   ├── road_toolbar_create_menu.gd
+│   │   │   ├── road_toolbar_create_menu.gd.uid
+│   │   │   ├── road_toolbar.gd
+│   │   │   ├── road_toolbar.gd.uid
+│   │   │   ├── road_toolbar_settings_menu.gd
+│   │   │   ├── road_toolbar_settings_menu.gd.uid
+│   │   │   └── road_toolbar.tscn
+│   │   ├── LICENSE
+│   │   ├── plugin.cfg
+│   │   ├── plugin.gd
+│   │   ├── plugin.gd.uid
+│   │   └── README.md
+│   ├── simplegrasstextured
+│   │   ├── gui
+│   │   │   ├── about.gd
+│   │   │   ├── about.gd.uid
+│   │   │   ├── about.tscn
+│   │   │   ├── clear_all_confirmation_dialog.gd
+│   │   │   ├── clear_all_confirmation_dialog.gd.uid
+│   │   │   ├── clear_all_confirmation_dialog.tscn
+│   │   │   ├── domain_range.gd
+│   │   │   ├── domain_range.gd.uid
+│   │   │   ├── domain_range.tscn
+│   │   │   ├── global_parameters.gd
+│   │   │   ├── global_parameters.gd.uid
+│   │   │   ├── global_parameters.tscn
+│   │   │   ├── toolbar.gd
+│   │   │   ├── toolbar.gd.uid
+│   │   │   ├── toolbar_menu.gd
+│   │   │   ├── toolbar_menu.gd.uid
+│   │   │   ├── toolbar_menu.tscn
+│   │   │   ├── toolbar.tscn
+│   │   │   ├── toolbar_up.gd
+│   │   │   ├── toolbar_up.gd.uid
+│   │   │   └── toolbar_up.tscn
+│   │   ├── images
+│   │   │   ├── motion_frame.png
+│   │   │   ├── motion_frame.png.import
+│   │   │   ├── motion.png
+│   │   │   ├── motion.png.import
+│   │   │   ├── normal_frame.png
+│   │   │   ├── normal_frame.png.import
+│   │   │   ├── normal.png
+│   │   │   ├── normal.png.import
+│   │   │   ├── pointer.png
+│   │   │   ├── pointer.png.import
+│   │   │   ├── pointer_rect.png
+│   │   │   ├── pointer_rect.png.import
+│   │   │   ├── sgt_icon_airbrush_dark.svg
+│   │   │   ├── sgt_icon_airbrush_dark.svg.import
+│   │   │   ├── sgt_icon_airbrush.svg
+│   │   │   ├── sgt_icon_airbrush.svg.import
+│   │   │   ├── sgt_icon_arrow_up_dark.svg
+│   │   │   ├── sgt_icon_arrow_up_dark.svg.import
+│   │   │   ├── sgt_icon_arrow_up.svg
+│   │   │   ├── sgt_icon_arrow_up.svg.import
+│   │   │   ├── sgt_icon_density_dark.svg
+│   │   │   ├── sgt_icon_density_dark.svg.import
+│   │   │   ├── sgt_icon_density.svg
+│   │   │   ├── sgt_icon_density.svg.import
+│   │   │   ├── sgt_icon_distance_dark.svg
+│   │   │   ├── sgt_icon_distance_dark.svg.import
+│   │   │   ├── sgt_icon_distance.svg
+│   │   │   ├── sgt_icon_distance.svg.import
+│   │   │   ├── sgt_icon_eraser_dark.svg
+│   │   │   ├── sgt_icon_eraser_dark.svg.import
+│   │   │   ├── sgt_icon_eraser.svg
+│   │   │   ├── sgt_icon_eraser.svg.import
+│   │   │   ├── sgt_icon_pen_dark.svg
+│   │   │   ├── sgt_icon_pen_dark.svg.import
+│   │   │   ├── sgt_icon_pen.svg
+│   │   │   ├── sgt_icon_pen.svg.import
+│   │   │   ├── sgt_icon_radius_dark.svg
+│   │   │   ├── sgt_icon_radius_dark.svg.import
+│   │   │   ├── sgt_icon_radius.svg
+│   │   │   ├── sgt_icon_radius.svg.import
+│   │   │   ├── sgt_icon_slope_dark.svg
+│   │   │   ├── sgt_icon_slope_dark.svg.import
+│   │   │   ├── sgt_icon_slope.svg
+│   │   │   ├── sgt_icon_slope.svg.import
+│   │   │   ├── wind_pattern.png
+│   │   │   └── wind_pattern.png.import
+│   │   ├── materials
+│   │   │   ├── .gdignore
+│   │   │   ├── grass.tres
+│   │   │   ├── icon.tres
+│   │   │   └── position.tres
+│   │   ├── shaders
+│   │   │   ├── blur1.gdshader
+│   │   │   ├── blur1.gdshader.uid
+│   │   │   ├── blur2.gdshader
+│   │   │   ├── blur2.gdshader.uid
+│   │   │   ├── distance.gdshader
+│   │   │   ├── distance.gdshader.uid
+│   │   │   ├── .gdignore
+│   │   │   ├── grass.gdshader
+│   │   │   ├── grass.gdshaderinc
+│   │   │   ├── grass.gdshaderinc.uid
+│   │   │   ├── grass.gdshader.uid
+│   │   │   ├── grass_linear.gdshader
+│   │   │   ├── grass_linear.gdshader.uid
+│   │   │   ├── grass_nearest.gdshader
+│   │   │   ├── grass_nearest.gdshader.uid
+│   │   │   ├── grass_nearest_mipmap.gdshader
+│   │   │   ├── grass_nearest_mipmap.gdshader.uid
+│   │   │   ├── grass_unshaded.gdshader
+│   │   │   ├── grass_unshaded.gdshader.uid
+│   │   │   ├── grass_unshaded_linear.gdshader
+│   │   │   ├── grass_unshaded_linear.gdshader.uid
+│   │   │   ├── grass_unshaded_nearest.gdshader
+│   │   │   ├── grass_unshaded_nearest.gdshader.uid
+│   │   │   ├── grass_unshaded_nearest_mipmap.gdshader
+│   │   │   ├── grass_unshaded_nearest_mipmap.gdshader.uid
+│   │   │   ├── motion1.gdshader
+│   │   │   ├── motion1.gdshader.uid
+│   │   │   ├── motion2.gdshader
+│   │   │   ├── motion2.gdshader.uid
+│   │   │   ├── normal.gdshader
+│   │   │   ├── normal.gdshader.uid
+│   │   │   ├── position.gdshader
+│   │   │   └── position.gdshader.uid
+│   │   ├── textures
+│   │   │   ├── grassbushcc008.png
+│   │   │   └── grassbushcc008.png.import
+│   │   ├── default_mesh_builder.gd
+│   │   ├── default_mesh_builder.gd.uid
+│   │   ├── default_mesh.tres
+│   │   ├── grass.gd
+│   │   ├── grass.gd.uid
+│   │   ├── LICENSE
+│   │   ├── plugin.cfg
+│   │   ├── plugin.gd
+│   │   ├── plugin.gd.uid
+│   │   ├── sgt_icon_48.svg
+│   │   ├── sgt_icon_48.svg.import
+│   │   ├── sgt_icon.svg
+│   │   ├── sgt_icon.svg.import
+│   │   ├── sgt_inspector.gd
+│   │   ├── sgt_inspector.gd.uid
+│   │   ├── singleton.gd
+│   │   ├── singleton.gd.uid
+│   │   └── singleton.tscn
+│   ├── simplex_terrain
+│   │   ├── demo
+│   │   │   ├── biomes
+│   │   │   │   ├── alpine_peaks.tres
+│   │   │   │   ├── badlands_oasis.tres
+│   │   │   │   ├── desert.tres
+│   │   │   │   ├── eldritch_canyonlands.tres
+│   │   │   │   ├── everest_range.tres
+│   │   │   │   ├── glacial_valley.tres
+│   │   │   │   ├── mountains.tres
+│   │   │   │   ├── mountain_valleys.tres
+│   │   │   │   ├── plains.tres
+│   │   │   │   └── terraced_hills.tres
+│   │   │   ├── textures
+│   │   │   │   ├── Grass003
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── height.png
+│   │   │   │   │   ├── height.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   ├── Grass008
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   └── normal.png.import
+│   │   │   │   ├── Ground067
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── height.png
+│   │   │   │   │   ├── height.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   ├── Ground090
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── height.png
+│   │   │   │   │   ├── height.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   ├── Ice002
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── height.png
+│   │   │   │   │   ├── height.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   ├── Rock026
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   └── normal.png.import
+│   │   │   │   ├── Rock029
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── height.png
+│   │   │   │   │   ├── height.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   ├── Rock032
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── height.png
+│   │   │   │   │   ├── height.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   ├── Rock050
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── height.png
+│   │   │   │   │   ├── height.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   ├── RockFace
+│   │   │   │   │   ├── albedo.png
+│   │   │   │   │   ├── albedo.png.import
+│   │   │   │   │   ├── normal.png
+│   │   │   │   │   ├── normal.png.import
+│   │   │   │   │   ├── rock_face_ao_1k.png
+│   │   │   │   │   ├── rock_face_ao_1k.png.import
+│   │   │   │   │   ├── rock_face_arm_1k.png
+│   │   │   │   │   ├── rock_face_arm_1k.png.import
+│   │   │   │   │   ├── rock_face_disp_1k.png
+│   │   │   │   │   ├── rock_face_disp_1k.png.import
+│   │   │   │   │   ├── rock_face_nor_dx_1k.png
+│   │   │   │   │   ├── rock_face_nor_dx_1k.png.import
+│   │   │   │   │   ├── roughness.png
+│   │   │   │   │   └── roughness.png.import
+│   │   │   │   └── Snow008A
+│   │   │   │       ├── albedo.png
+│   │   │   │       ├── albedo.png.import
+│   │   │   │       ├── height.png
+│   │   │   │       ├── height.png.import
+│   │   │   │       ├── normal.png
+│   │   │   │       ├── normal.png.import
+│   │   │   │       ├── roughness.png
+│   │   │   │       └── roughness.png.import
+│   │   │   ├── FlyCamera.cs
+│   │   │   ├── FlyCamera.cs.uid
+│   │   │   ├── infinite_demo.tscn
+│   │   │   ├── terrain_assets.tres
+│   │   │   ├── whittaker_10_biomes.png
+│   │   │   ├── whittaker_10_biomes.png.import
+│   │   │   └── world.tres
+│   │   ├── shaders
+│   │   │   ├── blend.glsl
+│   │   │   ├── blend.glsl.import
+│   │   │   ├── blur.glsl
+│   │   │   ├── blur.glsl.import
+│   │   │   ├── fractal_noise.glsl
+│   │   │   ├── fractal_noise.glsl.import
+│   │   │   ├── perlin_noise.glsl
+│   │   │   └── perlin_noise.glsl.import
+│   │   ├── src
+│   │   │   ├── Core
+│   │   │   │   ├── Data
+│   │   │   │   │   ├── ChunkCoordinate.cs
+│   │   │   │   │   ├── ChunkCoordinate.cs.uid
+│   │   │   │   │   ├── HeightMatrix.cs
+│   │   │   │   │   ├── HeightMatrix.cs.uid
+│   │   │   │   │   ├── InstanceSet.cs
+│   │   │   │   │   ├── InstanceSet.cs.uid
+│   │   │   │   │   ├── SplatWeightSet.cs
+│   │   │   │   │   ├── SplatWeightSet.cs.uid
+│   │   │   │   │   ├── SplineSet.cs
+│   │   │   │   │   └── SplineSet.cs.uid
+│   │   │   │   ├── Export
+│   │   │   │   │   ├── JsonGraphSerializer.cs
+│   │   │   │   │   ├── JsonGraphSerializer.cs.uid
+│   │   │   │   │   ├── MeshCompiler.cs
+│   │   │   │   │   ├── MeshCompiler.cs.uid
+│   │   │   │   │   ├── PrefabBaker.cs
+│   │   │   │   │   └── PrefabBaker.cs.uid
+│   │   │   │   ├── Gpu
+│   │   │   │   │   ├── GpuTerrain.cs
+│   │   │   │   │   └── GpuTerrain.cs.uid
+│   │   │   │   ├── Graph
+│   │   │   │   │   ├── ConnectionData.cs
+│   │   │   │   │   ├── ConnectionData.cs.uid
+│   │   │   │   │   ├── GraphCommentData.cs
+│   │   │   │   │   ├── GraphCommentData.cs.uid
+│   │   │   │   │   ├── GraphEvaluator.cs
+│   │   │   │   │   ├── GraphEvaluator.cs.uid
+│   │   │   │   │   ├── GraphFrameData.cs
+│   │   │   │   │   ├── GraphFrameData.cs.uid
+│   │   │   │   │   ├── SharedVariablesResource.cs
+│   │   │   │   │   ├── SharedVariablesResource.cs.uid
+│   │   │   │   │   ├── TerrainGraphResource.cs
+│   │   │   │   │   └── TerrainGraphResource.cs.uid
+│   │   │   │   ├── Nodes
+│   │   │   │   │   ├── Base
+│   │   │   │   │   │   ├── DummyConstantNodeResource.cs
+│   │   │   │   │   │   ├── DummyConstantNodeResource.cs.uid
+│   │   │   │   │   │   ├── DummyNodes.cs
+│   │   │   │   │   │   ├── DummyNodes.cs.uid
+│   │   │   │   │   │   ├── DummyPassthroughNodeResource.cs
+│   │   │   │   │   │   ├── DummyPassthroughNodeResource.cs.uid
+│   │   │   │   │   │   ├── INoiseSource.cs
+│   │   │   │   │   │   ├── INoiseSource.cs.uid
+│   │   │   │   │   │   ├── LoopInputNodeResource.cs
+│   │   │   │   │   │   ├── LoopInputNodeResource.cs.uid
+│   │   │   │   │   │   ├── LoopNodeResource.cs
+│   │   │   │   │   │   ├── LoopNodeResource.cs.uid
+│   │   │   │   │   │   ├── LoopNodes.cs
+│   │   │   │   │   │   ├── LoopNodes.cs.uid
+│   │   │   │   │   │   ├── LoopOutputNodeResource.cs
+│   │   │   │   │   │   ├── LoopOutputNodeResource.cs.uid
+│   │   │   │   │   │   ├── NoiseMath.cs
+│   │   │   │   │   │   ├── NoiseMath.cs.uid
+│   │   │   │   │   │   ├── PortalNodes.cs
+│   │   │   │   │   │   ├── PortalNodes.cs.uid
+│   │   │   │   │   │   ├── PortalReceiverNodeResource.cs
+│   │   │   │   │   │   ├── PortalReceiverNodeResource.cs.uid
+│   │   │   │   │   │   ├── PortalTransmitterNodeResource.cs
+│   │   │   │   │   │   ├── PortalTransmitterNodeResource.cs.uid
+│   │   │   │   │   │   ├── Port.cs
+│   │   │   │   │   │   ├── Port.cs.uid
+│   │   │   │   │   │   ├── TerrainNode.cs
+│   │   │   │   │   │   ├── TerrainNode.cs.uid
+│   │   │   │   │   │   ├── TerrainNodeResource.cs
+│   │   │   │   │   │   └── TerrainNodeResource.cs.uid
+│   │   │   │   │   ├── Biome
+│   │   │   │   │   │   ├── BiomeBlendNode.cs
+│   │   │   │   │   │   ├── BiomeBlendNode.cs.uid
+│   │   │   │   │   │   ├── BiomeBlendNodeResource.cs
+│   │   │   │   │   │   ├── BiomeBlendNodeResource.cs.uid
+│   │   │   │   │   │   ├── BiomeReferenceNode.cs
+│   │   │   │   │   │   ├── BiomeReferenceNode.cs.uid
+│   │   │   │   │   │   ├── BiomeReferenceNodeResource.cs
+│   │   │   │   │   │   ├── BiomeReferenceNodeResource.cs.uid
+│   │   │   │   │   │   ├── WhittakerLookupNode.cs
+│   │   │   │   │   │   ├── WhittakerLookupNode.cs.uid
+│   │   │   │   │   │   ├── WhittakerLookupNodeResource.cs
+│   │   │   │   │   │   └── WhittakerLookupNodeResource.cs.uid
+│   │   │   │   │   ├── Height
+│   │   │   │   │   │   ├── AspectMapperNode.cs
+│   │   │   │   │   │   ├── AspectMapperNode.cs.uid
+│   │   │   │   │   │   ├── AspectMapperNodeResource.cs
+│   │   │   │   │   │   ├── AspectMapperNodeResource.cs.uid
+│   │   │   │   │   │   ├── BeachNode.cs
+│   │   │   │   │   │   ├── BeachNode.cs.uid
+│   │   │   │   │   │   ├── BeachNodeResource.cs
+│   │   │   │   │   │   ├── BeachNodeResource.cs.uid
+│   │   │   │   │   │   ├── BlendNode.cs
+│   │   │   │   │   │   ├── BlendNode.cs.uid
+│   │   │   │   │   │   ├── BlendNodeResource.cs
+│   │   │   │   │   │   ├── BlendNodeResource.cs.uid
+│   │   │   │   │   │   ├── BlurNode.cs
+│   │   │   │   │   │   ├── BlurNode.cs.uid
+│   │   │   │   │   │   ├── BlurNodeResource.cs
+│   │   │   │   │   │   ├── BlurNodeResource.cs.uid
+│   │   │   │   │   │   ├── CavityNode.cs
+│   │   │   │   │   │   ├── CavityNode.cs.uid
+│   │   │   │   │   │   ├── CavityNodeResource.cs
+│   │   │   │   │   │   ├── CavityNodeResource.cs.uid
+│   │   │   │   │   │   ├── CurveNode.cs
+│   │   │   │   │   │   ├── CurveNode.cs.uid
+│   │   │   │   │   │   ├── CurveNodeResource.cs
+│   │   │   │   │   │   ├── CurveNodeResource.cs.uid
+│   │   │   │   │   │   ├── ErosionNode.cs
+│   │   │   │   │   │   ├── ErosionNode.cs.uid
+│   │   │   │   │   │   ├── ErosionNodeResource.cs
+│   │   │   │   │   │   ├── ErosionNodeResource.cs.uid
+│   │   │   │   │   │   ├── FractalNode.cs
+│   │   │   │   │   │   ├── FractalNode.cs.uid
+│   │   │   │   │   │   ├── FractalNodeResource.cs
+│   │   │   │   │   │   ├── FractalNodeResource.cs.uid
+│   │   │   │   │   │   ├── IslandMaskNode.cs
+│   │   │   │   │   │   ├── IslandMaskNode.cs.uid
+│   │   │   │   │   │   ├── IslandMaskNodeResource.cs
+│   │   │   │   │   │   ├── IslandMaskNodeResource.cs.uid
+│   │   │   │   │   │   ├── LakeExcavatorNode.cs
+│   │   │   │   │   │   ├── LakeExcavatorNode.cs.uid
+│   │   │   │   │   │   ├── LakeExcavatorNodeResource.cs
+│   │   │   │   │   │   ├── LakeExcavatorNodeResource.cs.uid
+│   │   │   │   │   │   ├── LedgeNode.cs
+│   │   │   │   │   │   ├── LedgeNode.cs.uid
+│   │   │   │   │   │   ├── LedgeNodeResource.cs
+│   │   │   │   │   │   ├── LedgeNodeResource.cs.uid
+│   │   │   │   │   │   ├── LevelsNode.cs
+│   │   │   │   │   │   ├── LevelsNode.cs.uid
+│   │   │   │   │   │   ├── LevelsNodeResource.cs
+│   │   │   │   │   │   ├── LevelsNodeResource.cs.uid
+│   │   │   │   │   │   ├── OceanLevelNode.cs
+│   │   │   │   │   │   ├── OceanLevelNode.cs.uid
+│   │   │   │   │   │   ├── OceanLevelNodeResource.cs
+│   │   │   │   │   │   ├── OceanLevelNodeResource.cs.uid
+│   │   │   │   │   │   ├── ParallaxDisplacementNode.cs
+│   │   │   │   │   │   ├── ParallaxDisplacementNode.cs.uid
+│   │   │   │   │   │   ├── ParallaxDisplacementNodeResource.cs
+│   │   │   │   │   │   ├── ParallaxDisplacementNodeResource.cs.uid
+│   │   │   │   │   │   ├── PerlinNoiseNode.cs
+│   │   │   │   │   │   ├── PerlinNoiseNode.cs.uid
+│   │   │   │   │   │   ├── PerlinNoiseNodeResource.cs
+│   │   │   │   │   │   ├── PerlinNoiseNodeResource.cs.uid
+│   │   │   │   │   │   ├── PrimitiveFormNode.cs
+│   │   │   │   │   │   ├── PrimitiveFormNode.cs.uid
+│   │   │   │   │   │   ├── PrimitiveFormNodeResource.cs
+│   │   │   │   │   │   ├── PrimitiveFormNodeResource.cs.uid
+│   │   │   │   │   │   ├── RiverGeneratorNode.cs
+│   │   │   │   │   │   ├── RiverGeneratorNode.cs.uid
+│   │   │   │   │   │   ├── RiverGeneratorNodeResource.cs
+│   │   │   │   │   │   ├── RiverGeneratorNodeResource.cs.uid
+│   │   │   │   │   │   ├── SlopeNode.cs
+│   │   │   │   │   │   ├── SlopeNode.cs.uid
+│   │   │   │   │   │   ├── SlopeNodeResource.cs
+│   │   │   │   │   │   ├── SlopeNodeResource.cs.uid
+│   │   │   │   │   │   ├── SplatNode.cs
+│   │   │   │   │   │   ├── SplatNode.cs.uid
+│   │   │   │   │   │   ├── SplatNodeResource.cs
+│   │   │   │   │   │   ├── SplatNodeResource.cs.uid
+│   │   │   │   │   │   ├── SpotNode.cs
+│   │   │   │   │   │   ├── SpotNode.cs.uid
+│   │   │   │   │   │   ├── SpotNodeResource.cs
+│   │   │   │   │   │   ├── SpotNodeResource.cs.uid
+│   │   │   │   │   │   ├── TerraceNode.cs
+│   │   │   │   │   │   ├── TerraceNode.cs.uid
+│   │   │   │   │   │   ├── TerraceNodeResource.cs
+│   │   │   │   │   │   ├── TerraceNodeResource.cs.uid
+│   │   │   │   │   │   ├── TextureInputNode.cs
+│   │   │   │   │   │   ├── TextureInputNode.cs.uid
+│   │   │   │   │   │   ├── TextureInputNodeResource.cs
+│   │   │   │   │   │   ├── TextureInputNodeResource.cs.uid
+│   │   │   │   │   │   ├── VoronoiNode.cs
+│   │   │   │   │   │   ├── VoronoiNode.cs.uid
+│   │   │   │   │   │   ├── VoronoiNodeResource.cs
+│   │   │   │   │   │   └── VoronoiNodeResource.cs.uid
+│   │   │   │   │   ├── Modifier
+│   │   │   │   │   ├── Output
+│   │   │   │   │   │   ├── HeightmapExportNode.cs
+│   │   │   │   │   │   ├── HeightmapExportNode.cs.uid
+│   │   │   │   │   │   ├── HeightmapExportNodeResource.cs
+│   │   │   │   │   │   ├── HeightmapExportNodeResource.cs.uid
+│   │   │   │   │   │   ├── HeightOutputNode.cs
+│   │   │   │   │   │   ├── HeightOutputNode.cs.uid
+│   │   │   │   │   │   ├── HeightOutputNodeResource.cs
+│   │   │   │   │   │   ├── HeightOutputNodeResource.cs.uid
+│   │   │   │   │   │   ├── Terrain3DControlOutputNode.cs
+│   │   │   │   │   │   ├── Terrain3DControlOutputNode.cs.uid
+│   │   │   │   │   │   ├── Terrain3DControlOutputNodeResource.cs
+│   │   │   │   │   │   ├── Terrain3DControlOutputNodeResource.cs.uid
+│   │   │   │   │   │   ├── Terrain3DInstancerOutputNode.cs
+│   │   │   │   │   │   ├── Terrain3DInstancerOutputNode.cs.uid
+│   │   │   │   │   │   ├── Terrain3DInstancerOutputNodeResource.cs
+│   │   │   │   │   │   └── Terrain3DInstancerOutputNodeResource.cs.uid
+│   │   │   │   │   ├── Scatter
+│   │   │   │   │   │   ├── CoordinateMapping.cs
+│   │   │   │   │   │   ├── CoordinateMapping.cs.uid
+│   │   │   │   │   │   ├── ExcavationNode.cs
+│   │   │   │   │   │   ├── ExcavationNode.cs.uid
+│   │   │   │   │   │   ├── ExcavationNodeResource.cs
+│   │   │   │   │   │   ├── ExcavationNodeResource.cs.uid
+│   │   │   │   │   │   ├── FoliageDensityNode.cs
+│   │   │   │   │   │   ├── FoliageDensityNode.cs.uid
+│   │   │   │   │   │   ├── FoliageDensityNodeResource.cs
+│   │   │   │   │   │   ├── FoliageDensityNodeResource.cs.uid
+│   │   │   │   │   │   ├── ForestSimulationNode.cs
+│   │   │   │   │   │   ├── ForestSimulationNode.cs.uid
+│   │   │   │   │   │   ├── ForestSimulationNodeResource.cs
+│   │   │   │   │   │   ├── ForestSimulationNodeResource.cs.uid
+│   │   │   │   │   │   ├── ParticleSlidingNode.cs
+│   │   │   │   │   │   ├── ParticleSlidingNode.cs.uid
+│   │   │   │   │   │   ├── ParticleSlidingNodeResource.cs
+│   │   │   │   │   │   ├── ParticleSlidingNodeResource.cs.uid
+│   │   │   │   │   │   ├── ProximityDecimationNode.cs
+│   │   │   │   │   │   ├── ProximityDecimationNode.cs.uid
+│   │   │   │   │   │   ├── ProximityDecimationNodeResource.cs
+│   │   │   │   │   │   ├── ProximityDecimationNodeResource.cs.uid
+│   │   │   │   │   │   ├── PruneNode.cs
+│   │   │   │   │   │   ├── PruneNode.cs.uid
+│   │   │   │   │   │   ├── PruneNodeResource.cs
+│   │   │   │   │   │   ├── PruneNodeResource.cs.uid
+│   │   │   │   │   │   ├── RadialDispersalNode.cs
+│   │   │   │   │   │   ├── RadialDispersalNode.cs.uid
+│   │   │   │   │   │   ├── RadialDispersalNodeResource.cs
+│   │   │   │   │   │   ├── RadialDispersalNodeResource.cs.uid
+│   │   │   │   │   │   ├── ScatterNode.cs
+│   │   │   │   │   │   ├── ScatterNode.cs.uid
+│   │   │   │   │   │   ├── ScatterNodeResource.cs
+│   │   │   │   │   │   ├── ScatterNodeResource.cs.uid
+│   │   │   │   │   │   ├── TerrainSnapNode.cs
+│   │   │   │   │   │   ├── TerrainSnapNode.cs.uid
+│   │   │   │   │   │   ├── TerrainSnapNodeResource.cs
+│   │   │   │   │   │   └── TerrainSnapNodeResource.cs.uid
+│   │   │   │   │   └── Spline
+│   │   │   │   │       ├── DijkstraPathNode.cs
+│   │   │   │   │       ├── DijkstraPathNode.cs.uid
+│   │   │   │   │       ├── DijkstraPathNodeResource.cs
+│   │   │   │   │       ├── DijkstraPathNodeResource.cs.uid
+│   │   │   │   │       ├── GabrielGraphNode.cs
+│   │   │   │   │       ├── GabrielGraphNode.cs.uid
+│   │   │   │   │       ├── GabrielGraphNodeResource.cs
+│   │   │   │   │       ├── GabrielGraphNodeResource.cs.uid
+│   │   │   │   │       ├── SplineClipNode.cs
+│   │   │   │   │       ├── SplineClipNode.cs.uid
+│   │   │   │   │       ├── SplineClipNodeResource.cs
+│   │   │   │   │       ├── SplineClipNodeResource.cs.uid
+│   │   │   │   │       ├── SplineConformNode.cs
+│   │   │   │   │       ├── SplineConformNode.cs.uid
+│   │   │   │   │       ├── SplineConformNodeResource.cs
+│   │   │   │   │       ├── SplineConformNodeResource.cs.uid
+│   │   │   │   │       ├── SplineInputNode.cs
+│   │   │   │   │       ├── SplineInputNode.cs.uid
+│   │   │   │   │       ├── SplineInputNodeResource.cs
+│   │   │   │   │       ├── SplineInputNodeResource.cs.uid
+│   │   │   │   │       ├── SplineMath.cs
+│   │   │   │   │       ├── SplineMath.cs.uid
+│   │   │   │   │       ├── SplineOptimizeNode.cs
+│   │   │   │   │       ├── SplineOptimizeNode.cs.uid
+│   │   │   │   │       ├── SplineOptimizeNodeResource.cs
+│   │   │   │   │       ├── SplineOptimizeNodeResource.cs.uid
+│   │   │   │   │       ├── SplineRelaxNode.cs
+│   │   │   │   │       ├── SplineRelaxNode.cs.uid
+│   │   │   │   │       ├── SplineRelaxNodeResource.cs
+│   │   │   │   │       ├── SplineRelaxNodeResource.cs.uid
+│   │   │   │   │       ├── SplineStrokeNode.cs
+│   │   │   │   │       ├── SplineStrokeNode.cs.uid
+│   │   │   │   │       ├── SplineStrokeNodeResource.cs
+│   │   │   │   │       ├── SplineStrokeNodeResource.cs.uid
+│   │   │   │   │       ├── SplineSubdivideNode.cs
+│   │   │   │   │       ├── SplineSubdivideNode.cs.uid
+│   │   │   │   │       ├── SplineSubdivideNodeResource.cs
+│   │   │   │   │       ├── SplineSubdivideNodeResource.cs.uid
+│   │   │   │   │       ├── SplineWeldCloseNode.cs
+│   │   │   │   │       ├── SplineWeldCloseNode.cs.uid
+│   │   │   │   │       ├── SplineWeldCloseNodeResource.cs
+│   │   │   │   │       └── SplineWeldCloseNodeResource.cs.uid
+│   │   │   │   └── Threading
+│   │   │   │       ├── ChunkPayload.cs
+│   │   │   │       ├── ChunkPayload.cs.uid
+│   │   │   │       ├── GenerationContext.cs
+│   │   │   │       ├── GenerationContext.cs.uid
+│   │   │   │       ├── TerrainScheduler.cs
+│   │   │   │       └── TerrainScheduler.cs.uid
+│   │   │   ├── Editor
+│   │   │   │   ├── GraphEditor
+│   │   │   │   │   ├── PinBoardPanel.cs
+│   │   │   │   │   ├── PinBoardPanel.cs.uid
+│   │   │   │   │   ├── PortConnector.cs
+│   │   │   │   │   ├── PortConnector.cs.uid
+│   │   │   │   │   ├── TerrainGraphComment.cs
+│   │   │   │   │   ├── TerrainGraphComment.cs.uid
+│   │   │   │   │   ├── TerrainGraphEdit.cs
+│   │   │   │   │   ├── TerrainGraphEdit.cs.uid
+│   │   │   │   │   ├── TerrainGraphEditor.cs
+│   │   │   │   │   ├── TerrainGraphEditor.cs.uid
+│   │   │   │   │   ├── TerrainGraphFrame.cs
+│   │   │   │   │   ├── TerrainGraphFrame.cs.uid
+│   │   │   │   │   ├── TerrainGraphNode.cs
+│   │   │   │   │   └── TerrainGraphNode.cs.uid
+│   │   │   │   ├── Icons
+│   │   │   │   └── Inspectors
+│   │   │   │       ├── NodePropertyDrawer.cs
+│   │   │   │       └── NodePropertyDrawer.cs.uid
+│   │   │   ├── Export
+│   │   │   └── Integration
+│   │   │       ├── Standard
+│   │   │       └── Terrain3D
+│   │   │           ├── ControlMapPacker.cs
+│   │   │           ├── ControlMapPacker.cs.uid
+│   │   │           ├── TerrainManager.cs
+│   │   │           └── TerrainManager.cs.uid
+│   │   ├── plugin.cfg
+│   │   ├── ProceduralTerrainPlugin.cs
+│   │   ├── ProceduralTerrainPlugin.cs.uid
+│   │   └── README.md
+│   ├── sky_3d
+│   │   ├── assets
+│   │   │   ├── resources
+│   │   │   │   ├── SNoise.tres
+│   │   │   │   └── SunMoonLightFade.tres
+│   │   │   ├── textures
+│   │   │   │   ├── noise2.png
+│   │   │   │   ├── noise2.png.import
+│   │   │   │   ├── noiseClouds.png
+│   │   │   │   ├── noiseClouds.png.import
+│   │   │   │   ├── noise.jpg
+│   │   │   │   ├── noise.jpg.import
+│   │   │   │   ├── SkyIcon.png
+│   │   │   │   └── SkyIcon.png.import
+│   │   │   └── thirdparty
+│   │   │       └── textures
+│   │   │           ├── milkyway
+│   │   │           │   ├── LICENSE.md
+│   │   │           │   ├── Milkyway.jpg
+│   │   │           │   ├── Milkyway.jpg.import
+│   │   │           │   ├── StarField.jpg
+│   │   │           │   └── StarField.jpg.import
+│   │   │           └── moon
+│   │   │               ├── LICENSE.md
+│   │   │               ├── MoonMap.png
+│   │   │               └── MoonMap.png.import
+│   │   ├── shaders
+│   │   │   ├── AtmFog.gdshader
+│   │   │   ├── AtmFog.gdshader.uid
+│   │   │   ├── Common.gdshaderinc
+│   │   │   ├── Common.gdshaderinc.uid
+│   │   │   ├── LICENSE
+│   │   │   ├── SkyMaterial.gdshader
+│   │   │   └── SkyMaterial.gdshader.uid
+│   │   ├── src
+│   │   │   ├── OrbitalElements.gd
+│   │   │   ├── OrbitalElements.gd.uid
+│   │   │   ├── Plugin.gd
+│   │   │   ├── Plugin.gd.uid
+│   │   │   ├── ScatterLib.gd
+│   │   │   ├── ScatterLib.gd.uid
+│   │   │   ├── Sky3D.gd
+│   │   │   ├── Sky3D.gd.uid
+│   │   │   ├── SkyDome.gd
+│   │   │   ├── SkyDome.gd.uid
+│   │   │   ├── TimeOfDay.gd
+│   │   │   ├── TimeOfDay.gd.uid
+│   │   │   ├── TOD_Math.gd
+│   │   │   └── TOD_Math.gd.uid
+│   │   ├── LICENSE.txt
+│   │   ├── plugin.cfg
+│   │   ├── README.md
+│   │   └── ThirdParty.md
+│   ├── terrabrush
+│   │   ├── Assets
+│   │   │   ├── Brushes
+│   │   │   │   ├── circle_gradient.png
+│   │   │   │   ├── circle_gradient.png.import
+│   │   │   │   ├── patch.png
+│   │   │   │   ├── patch.png.import
+│   │   │   │   ├── small_dots.png
+│   │   │   │   ├── small_dots.png.import
+│   │   │   │   ├── square.png
+│   │   │   │   ├── square.png.import
+│   │   │   │   ├── x_gradient.png
+│   │   │   │   └── x_gradient.png.import
+│   │   │   ├── Buttons
+│   │   │   │   ├── circle_sign_white.png
+│   │   │   │   ├── circle_sign_white.png.import
+│   │   │   │   ├── circle_white.png
+│   │   │   │   ├── circle_white.png.import
+│   │   │   │   ├── square_white.png
+│   │   │   │   └── square_white.png.import
+│   │   │   ├── Icons
+│   │   │   │   ├── color_add.png
+│   │   │   │   ├── color_add.png.import
+│   │   │   │   ├── color_remove.png
+│   │   │   │   ├── color_remove.png.import
+│   │   │   │   ├── flow_add.png
+│   │   │   │   ├── flow_add.png.import
+│   │   │   │   ├── flow_remove.png
+│   │   │   │   ├── flow_remove.png.import
+│   │   │   │   ├── foliage_add.png
+│   │   │   │   ├── foliage_add.png.import
+│   │   │   │   ├── foliage_remove.png
+│   │   │   │   ├── foliage_remove.png.import
+│   │   │   │   ├── holes_add.png
+│   │   │   │   ├── holes_add.png.import
+│   │   │   │   ├── holes_remove.png
+│   │   │   │   ├── holes_remove.png.import
+│   │   │   │   ├── lock_add.png
+│   │   │   │   ├── lock_add.png.import
+│   │   │   │   ├── lock_remove.png
+│   │   │   │   ├── lock_remove.png.import
+│   │   │   │   ├── map_add.png
+│   │   │   │   ├── map_add.png.import
+│   │   │   │   ├── map_flatten.png
+│   │   │   │   ├── map_flatten.png.import
+│   │   │   │   ├── map_remove.png
+│   │   │   │   ├── map_remove.png.import
+│   │   │   │   ├── map_set_angle.png
+│   │   │   │   ├── map_set_angle.png.import
+│   │   │   │   ├── map_set_height.png
+│   │   │   │   ├── map_set_height.png.import
+│   │   │   │   ├── map_smooth.png
+│   │   │   │   ├── map_smooth.png.import
+│   │   │   │   ├── object_add.png
+│   │   │   │   ├── object_add.png.import
+│   │   │   │   ├── object_remove.png
+│   │   │   │   ├── object_remove.png.import
+│   │   │   │   ├── paint.png
+│   │   │   │   ├── paint.png.import
+│   │   │   │   ├── paint_withdot.png
+│   │   │   │   ├── paint_withdot.png.import
+│   │   │   │   ├── snow_add.png
+│   │   │   │   ├── snow_add.png.import
+│   │   │   │   ├── snow_remove.png
+│   │   │   │   ├── snow_remove.png.import
+│   │   │   │   ├── tag_add.png
+│   │   │   │   ├── tag_add.png.import
+│   │   │   │   ├── tag_remove.png
+│   │   │   │   ├── tag_remove.png.import
+│   │   │   │   ├── water_add.png
+│   │   │   │   ├── water_add.png.import
+│   │   │   │   ├── water_remove.png
+│   │   │   │   └── water_remove.png.import
+│   │   │   ├── brush_preview.png
+│   │   │   ├── brush_preview.png.import
+│   │   │   ├── button_hover.png
+│   │   │   ├── button_hover.png.import
+│   │   │   ├── button.png
+│   │   │   ├── button.png.import
+│   │   │   ├── button_pressed.png
+│   │   │   ├── button_pressed.png.import
+│   │   │   ├── circle_filter.png
+│   │   │   ├── circle_filter.png.import
+│   │   │   ├── placeholder_texture.png
+│   │   │   ├── placeholder_texture.png.import
+│   │   │   ├── transparency_hover.png
+│   │   │   ├── transparency_hover.png.import
+│   │   │   ├── transparency.png
+│   │   │   ├── transparency.png.import
+│   │   │   ├── transparency_selected.png
+│   │   │   ├── transparency_selected.png.import
+│   │   │   ├── white_circle.png
+│   │   │   └── white_circle.png.import
+│   │   ├── CSharpWrapper
+│   │   │   ├── Misc
+│   │   │   │   ├── TerrainPositionInformation.cs
+│   │   │   │   └── TerrainPositionInformation.cs.uid
+│   │   │   ├── Resources
+│   │   │   │   ├── FoliageDefinitionResource.cs
+│   │   │   │   ├── FoliageDefinitionResource.cs.uid
+│   │   │   │   ├── FoliageResource.cs
+│   │   │   │   ├── FoliageResource.cs.uid
+│   │   │   │   ├── MetaInfoLayerResource.cs
+│   │   │   │   ├── MetaInfoLayerResource.cs.uid
+│   │   │   │   ├── ObjectDefinitionResource.cs
+│   │   │   │   ├── ObjectDefinitionResource.cs.uid
+│   │   │   │   ├── ObjectOctreeLODDefinitionResource.cs
+│   │   │   │   ├── ObjectOctreeLODDefinitionResource.cs.uid
+│   │   │   │   ├── ObjectOctreeLODMeshDefinitionResource.cs
+│   │   │   │   ├── ObjectOctreeLODMeshDefinitionResource.cs.uid
+│   │   │   │   ├── ObjectOctreeLODMeshesDefinitionResource.cs
+│   │   │   │   ├── ObjectOctreeLODMeshesDefinitionResource.cs.uid
+│   │   │   │   ├── ObjectResource.cs
+│   │   │   │   ├── ObjectResource.cs.uid
+│   │   │   │   ├── SnowResource.cs
+│   │   │   │   ├── SnowResource.cs.uid
+│   │   │   │   ├── TextureSetResource.cs
+│   │   │   │   ├── TextureSetResource.cs.uid
+│   │   │   │   ├── TextureSetsResource.cs
+│   │   │   │   ├── TextureSetsResource.cs.uid
+│   │   │   │   ├── WaterResource.cs
+│   │   │   │   ├── WaterResource.cs.uid
+│   │   │   │   ├── ZoneResource.cs
+│   │   │   │   ├── ZoneResource.cs.uid
+│   │   │   │   ├── ZonesResource.cs
+│   │   │   │   └── ZonesResource.cs.uid
+│   │   │   ├── Enums.cs
+│   │   │   ├── Enums.cs.uid
+│   │   │   ├── TerraBrush.cs
+│   │   │   ├── TerraBrush.cs.uid
+│   │   │   ├── TerraBrushEditor.cs
+│   │   │   └── TerraBrushEditor.cs.uid
+│   │   ├── Resources
+│   │   │   ├── Shaders
+│   │   │   │   ├── clipmap_shader.gdshader
+│   │   │   │   ├── clipmap_shader.gdshader.uid
+│   │   │   │   ├── clipmap_shader_include.gdshaderinc
+│   │   │   │   ├── clipmap_shader_include.gdshaderinc.uid
+│   │   │   │   ├── debug_print_shader.gdshaderinc
+│   │   │   │   ├── debug_print_shader.gdshaderinc.uid
+│   │   │   │   ├── decal_sphere_shader.gdshader
+│   │   │   │   ├── decal_sphere_shader.gdshader.uid
+│   │   │   │   ├── foliage_multimesh_shader.gdshader
+│   │   │   │   ├── foliage_multimesh_shader.gdshader.uid
+│   │   │   │   ├── foliage_multimesh_shader_include.gdshaderinc
+│   │   │   │   ├── foliage_multimesh_shader_include.gdshaderinc.uid
+│   │   │   │   ├── foliage_shader.gdshader
+│   │   │   │   ├── foliage_shader.gdshader.uid
+│   │   │   │   ├── heightmap_clipmap_shader.gdshader
+│   │   │   │   ├── heightmap_clipmap_shader.gdshader.uid
+│   │   │   │   ├── heightmap_clipmap_shader_include.gdshaderinc
+│   │   │   │   ├── heightmap_clipmap_shader_include.gdshaderinc.uid
+│   │   │   │   ├── heightmap_shader.tres
+│   │   │   │   ├── snow_clipmap_shader.gdshader
+│   │   │   │   ├── snow_clipmap_shader.gdshader.uid
+│   │   │   │   ├── snow_clipmap_shader_include.gdshaderinc
+│   │   │   │   ├── snow_clipmap_shader_include.gdshaderinc.uid
+│   │   │   │   ├── terrain_texture_shader.gdshader
+│   │   │   │   ├── terrain_texture_shader.gdshader.uid
+│   │   │   │   ├── water_clipmap_shader.gdshader
+│   │   │   │   ├── water_clipmap_shader.gdshader.uid
+│   │   │   │   ├── water_clipmap_shader_include.gdshaderinc
+│   │   │   │   ├── water_clipmap_shader_include.gdshaderinc.uid
+│   │   │   │   ├── water_ripple_buffer_shader.gdshader
+│   │   │   │   ├── water_ripple_buffer_shader.gdshader.uid
+│   │   │   │   ├── water_ripple_shader.gdshader
+│   │   │   │   ├── water_ripple_shader.gdshader.uid
+│   │   │   │   ├── zones_shader_include.gdshaderinc
+│   │   │   │   └── zones_shader_include.gdshaderinc.uid
+│   │   │   └── DefaultNoise.tres
+│   │   ├── LICENSE
+│   │   ├── terrabrush_editor_node.png
+│   │   ├── terrabrush_editor_node.png.import
+│   │   ├── terrabrush.gdextension
+│   │   ├── terrabrush.gdextension.uid
+│   │   ├── terrabrush_node.png
+│   │   └── terrabrush_node.png.import
+│   ├── terrain_3d
+│   │   ├── brushes
+│   │   │   ├── acrylic1.exr
+│   │   │   ├── circle0.exr
+│   │   │   ├── circle1.exr
+│   │   │   ├── circle2.exr
+│   │   │   ├── circle3.exr
+│   │   │   ├── circle4.exr
+│   │   │   ├── .gdignore
+│   │   │   ├── hill1.exr
+│   │   │   ├── hill2.exr
+│   │   │   ├── mountain1.exr
+│   │   │   ├── mountain2.exr
+│   │   │   ├── mountain3.exr
+│   │   │   ├── mountain4.exr
+│   │   │   ├── peak1.exr
+│   │   │   ├── peak2.exr
+│   │   │   ├── peak3.exr
+│   │   │   ├── ring1.exr
+│   │   │   ├── smoke.exr
+│   │   │   ├── square1.exr
+│   │   │   ├── square2.exr
+│   │   │   ├── square3.exr
+│   │   │   ├── square4.exr
+│   │   │   ├── square5.exr
+│   │   │   ├── stones.exr
+│   │   │   ├── terrain1.exr
+│   │   │   ├── terrain2.exr
+│   │   │   ├── terrain3.exr
+│   │   │   ├── terrain4.exr
+│   │   │   ├── terrain5.exr
+│   │   │   ├── terrain6.exr
+│   │   │   ├── texture1.exr
+│   │   │   ├── texture2.exr
+│   │   │   ├── texture3.exr
+│   │   │   ├── texture4.exr
+│   │   │   ├── texture5.exr
+│   │   │   └── vegetation1.exr
+│   │   ├── extras
+│   │   │   ├── 3rd_party
+│   │   │   │   ├── import_sgt.gd
+│   │   │   │   ├── import_sgt.gd.uid
+│   │   │   │   ├── project_on_terrain3d.gd
+│   │   │   │   └── project_on_terrain3d.gd.uid
+│   │   │   ├── particle_example
+│   │   │   │   ├── grass.gdshader
+│   │   │   │   ├── grass.gdshader.uid
+│   │   │   │   ├── grass_material.tres
+│   │   │   │   ├── particles.gdshader
+│   │   │   │   ├── particles.gdshader.uid
+│   │   │   │   ├── process_material.tres
+│   │   │   │   ├── terrain_3D_particles.gd
+│   │   │   │   ├── terrain_3D_particles.gd.uid
+│   │   │   │   └── Terrain3DParticles.tscn
+│   │   │   └── shaders
+│   │   │       ├── hex_grid.gdshaderinc
+│   │   │       ├── hex_grid.gdshaderinc.uid
+│   │   │       ├── lightweight.gdshader
+│   │   │       ├── lightweight.gdshader.uid
+│   │   │       ├── minimum.gdshader
+│   │   │       └── minimum.gdshader.uid
+│   │   ├── icons
+│   │   │   ├── autoshader.svg
+│   │   │   ├── autoshader.svg.import
+│   │   │   ├── color_paint.svg
+│   │   │   ├── color_paint.svg.import
+│   │   │   ├── height_add.svg
+│   │   │   ├── height_add.svg.import
+│   │   │   ├── height_div.svg
+│   │   │   ├── height_div.svg.import
+│   │   │   ├── height_flat.svg
+│   │   │   ├── height_flat.svg.import
+│   │   │   ├── height_mul.svg
+│   │   │   ├── height_mul.svg.import
+│   │   │   ├── height_slope.svg
+│   │   │   ├── height_slope.svg.import
+│   │   │   ├── height_smooth.svg
+│   │   │   ├── height_smooth.svg.import
+│   │   │   ├── height_sub.svg
+│   │   │   ├── height_sub.svg.import
+│   │   │   ├── holes.svg
+│   │   │   ├── holes.svg.import
+│   │   │   ├── layers.svg
+│   │   │   ├── layers.svg.import
+│   │   │   ├── multimesh.svg
+│   │   │   ├── multimesh.svg.import
+│   │   │   ├── navigation.svg
+│   │   │   ├── navigation.svg.import
+│   │   │   ├── picker_checked.svg
+│   │   │   ├── picker_checked.svg.import
+│   │   │   ├── region_add.svg
+│   │   │   ├── region_add.svg.import
+│   │   │   ├── region_remove.svg
+│   │   │   ├── region_remove.svg.import
+│   │   │   ├── terrain3d.svg
+│   │   │   ├── terrain3d.svg.import
+│   │   │   ├── texture_paint.svg
+│   │   │   ├── texture_paint.svg.import
+│   │   │   ├── texture_spray.svg
+│   │   │   ├── texture_spray.svg.import
+│   │   │   ├── wetness.svg
+│   │   │   └── wetness.svg.import
+│   │   ├── menu
+│   │   │   ├── bake_lod_dialog.gd
+│   │   │   ├── bake_lod_dialog.gd.uid
+│   │   │   ├── bake_lod_dialog.tscn
+│   │   │   ├── baker.gd
+│   │   │   ├── baker.gd.uid
+│   │   │   ├── channel_packer_dragdrop.gd
+│   │   │   ├── channel_packer_dragdrop.gd.uid
+│   │   │   ├── channel_packer.gd
+│   │   │   ├── channel_packer.gd.uid
+│   │   │   ├── channel_packer_import_template.txt
+│   │   │   ├── channel_packer.tscn
+│   │   │   ├── directory_setup.gd
+│   │   │   ├── directory_setup.gd.uid
+│   │   │   ├── directory_setup.tscn
+│   │   │   ├── terrain_menu.gd
+│   │   │   └── terrain_menu.gd.uid
+│   │   ├── src
+│   │   │   ├── asset_dock_45.gd
+│   │   │   ├── asset_dock_45.gd.uid
+│   │   │   ├── asset_dock_45.tscn
+│   │   │   ├── asset_dock.gd
+│   │   │   ├── asset_dock.gd.uid
+│   │   │   ├── asset_dock.tscn
+│   │   │   ├── double_slider.gd
+│   │   │   ├── double_slider.gd.uid
+│   │   │   ├── editor_plugin.gd
+│   │   │   ├── editor_plugin.gd.uid
+│   │   │   ├── gradient_operation_builder.gd
+│   │   │   ├── gradient_operation_builder.gd.uid
+│   │   │   ├── multi_picker.gd
+│   │   │   ├── multi_picker.gd.uid
+│   │   │   ├── operation_builder.gd
+│   │   │   ├── operation_builder.gd.uid
+│   │   │   ├── region_gizmo.gd
+│   │   │   ├── region_gizmo.gd.uid
+│   │   │   ├── toolbar.gd
+│   │   │   ├── toolbar.gd.uid
+│   │   │   ├── tool_settings.gd
+│   │   │   ├── tool_settings.gd.uid
+│   │   │   ├── ui.gd
+│   │   │   └── ui.gd.uid
+│   │   ├── terrain_ground
+│   │   ├── tools
+│   │   │   ├── importer.gd
+│   │   │   ├── importer.gd.uid
+│   │   │   ├── importer.tscn
+│   │   │   ├── region_mover.gd
+│   │   │   └── region_mover.gd.uid
+│   │   ├── utils
+│   │   │   ├── terrain_3d_objects.gd
+│   │   │   ├── terrain_3d_objects.gd.uid
+│   │   │   ├── transform_changed_notifier.gd
+│   │   │   └── transform_changed_notifier.gd.uid
+│   │   ├── LICENSE.txt
+│   │   ├── plugin.cfg
+│   │   ├── README.md
+│   │   ├── terrain3d_00_00.res
+│   │   ├── terrain3d_00-01.res
+│   │   ├── terrain3d-01_00.res
+│   │   ├── terrain3d-01-01.res
+│   │   ├── terrain.gdextension
+│   │   └── terrain.gdextension.uid
+│   └── zylann.hterrain
+│       ├── doc
+│       │   ├── docs
+│       │   │   ├── images
+│       │   │   │   ├── alpha_blending_and_depth_blending.png
+│       │   │   │   ├── bad_array_blending.png
+│       │   │   │   ├── brush_editor.png
+│       │   │   │   ├── channel_packer.png
+│       │   │   │   ├── choose_bullet_physics.png
+│       │   │   │   ├── color_painting.png
+│       │   │   │   ├── data_directory_property.png
+│       │   │   │   ├── default_terrain.png
+│       │   │   │   ├── detail_layers.png
+│       │   │   │   ├── dilation.png
+│       │   │   │   ├── erosion_slope.png
+│       │   │   │   ├── erosion_steps.png
+│       │   │   │   ├── generator.png
+│       │   │   │   ├── gimp_png_preserve_colors.png
+│       │   │   │   ├── grass_models.png
+│       │   │   │   ├── hole_painting.png
+│       │   │   │   ├── ignore_tools_on_export.png
+│       │   │   │   ├── importer.png
+│       │   │   │   ├── inspector_texture_set.png
+│       │   │   │   ├── inspector_texture_set_save.png
+│       │   │   │   ├── lod_geometry.png
+│       │   │   │   ├── lookdev_grass.png
+│       │   │   │   ├── lookdev_menu.png
+│       │   │   │   ├── lots_of_textures_blending.png
+│       │   │   │   ├── low_poly.png
+│       │   │   │   ├── normalmap_conventions.png
+│       │   │   │   ├── overview.png
+│       │   │   │   ├── panel_import_button.png
+│       │   │   │   ├── panel_textures_edit_button.png
+│       │   │   │   ├── pbr_textures.png
+│       │   │   │   ├── resize_tool.png
+│       │   │   │   ├── sculpting_tools.png
+│       │   │   │   ├── single_sampling_and_triplanar_sampling.png
+│       │   │   │   ├── slope_limit_tool.png
+│       │   │   │   ├── splatmap_and_textured_result.png
+│       │   │   │   ├── texture_array_import_dock.png
+│       │   │   │   ├── texture_atlas_example.png
+│       │   │   │   ├── texture_dialog.png
+│       │   │   │   ├── texture_set_editor.png
+│       │   │   │   ├── texture_set_import_tool_directory.png
+│       │   │   │   ├── texture_set_import_tool.png
+│       │   │   │   ├── texture_set_import_tool_success.png
+│       │   │   │   ├── texture_set_import_tool_texture_types.png
+│       │   │   │   ├── texture_slots.png
+│       │   │   │   ├── tiling_artifacts.png
+│       │   │   │   ├── tiling_reduction.png
+│       │   │   │   ├── transition_array_blending.png
+│       │   │   │   ├── update_editor_collider.png
+│       │   │   │   └── warped_checker_variations.png
+│       │   │   └── index.md
+│       │   ├── .gdignore
+│       │   ├── mkdocs.yml
+│       │   └── requirements.txt
+│       ├── models
+│       │   ├── grass_quad.obj
+│       │   ├── grass_quad.obj.import
+│       │   ├── grass_quad_x2.obj
+│       │   ├── grass_quad_x2.obj.import
+│       │   ├── grass_quad_x3.obj
+│       │   ├── grass_quad_x3.obj.import
+│       │   ├── grass_quad_x4.obj
+│       │   └── grass_quad_x4.obj.import
+│       ├── native
+│       │   ├── godot-cpp
+│       │   ├── src
+│       │   │   ├── .gdignore
+│       │   │   ├── gd_library.cpp
+│       │   │   ├── image_utils.cpp
+│       │   │   ├── image_utils.h
+│       │   │   ├── int_range_2d.h
+│       │   │   ├── math_funcs.h
+│       │   │   ├── quad_tree_lod.cpp
+│       │   │   ├── quad_tree_lod.h
+│       │   │   └── vector2i.h
+│       │   ├── .clang-format
+│       │   ├── factory.gd
+│       │   ├── factory.gd.uid
+│       │   ├── .gitignore
+│       │   ├── image_utils_generic.gd
+│       │   ├── image_utils_generic.gd.uid
+│       │   ├── quad_tree_lod_generic.gd
+│       │   ├── quad_tree_lod_generic.gd.uid
+│       │   └── SConstruct
+│       ├── shaders
+│       │   ├── include
+│       │   │   ├── heightmap.gdshaderinc
+│       │   │   ├── heightmap.gdshaderinc.uid
+│       │   │   ├── heightmap_rgb8_encoding.gdshaderinc
+│       │   │   └── heightmap_rgb8_encoding.gdshaderinc.uid
+│       │   ├── array.gdshader
+│       │   ├── array.gdshader.uid
+│       │   ├── array_global.gdshader
+│       │   ├── array_global.gdshader.uid
+│       │   ├── detail.gdshader
+│       │   ├── detail.gdshader.uid
+│       │   ├── lookdev.gdshader
+│       │   ├── lookdev.gdshader.uid
+│       │   ├── low_poly.gdshader
+│       │   ├── low_poly.gdshader.uid
+│       │   ├── multisplat16.gdshader
+│       │   ├── multisplat16.gdshader.uid
+│       │   ├── multisplat16_global.gdshader
+│       │   ├── multisplat16_global.gdshader.uid
+│       │   ├── multisplat16_lite.gdshader
+│       │   ├── multisplat16_lite.gdshader.uid
+│       │   ├── simple4.gdshader
+│       │   ├── simple4.gdshader.uid
+│       │   ├── simple4_global.gdshader
+│       │   ├── simple4_global.gdshader.uid
+│       │   ├── simple4_lite.gdshader
+│       │   └── simple4_lite.gdshader.uid
+│       ├── tools
+│       │   ├── about
+│       │   │   ├── about_dialog.gd
+│       │   │   ├── about_dialog.gd.uid
+│       │   │   └── about_dialog.tscn
+│       │   ├── brush
+│       │   │   ├── settings_dialog
+│       │   │   │   ├── brush_settings_dialog.gd
+│       │   │   │   ├── brush_settings_dialog.gd.uid
+│       │   │   │   ├── brush_settings_dialog.tscn
+│       │   │   │   ├── preview_painter.gd
+│       │   │   │   ├── preview_painter.gd.uid
+│       │   │   │   ├── preview_scratchpad.gd
+│       │   │   │   ├── preview_scratchpad.gd.uid
+│       │   │   │   └── preview_scratchpad.tscn
+│       │   │   ├── shaders
+│       │   │   │   ├── alpha.gdshader
+│       │   │   │   ├── alpha.gdshader.uid
+│       │   │   │   ├── color.gdshader
+│       │   │   │   ├── color.gdshader.uid
+│       │   │   │   ├── erode.gdshader
+│       │   │   │   ├── erode.gdshader.uid
+│       │   │   │   ├── flatten.gdshader
+│       │   │   │   ├── flatten.gdshader.uid
+│       │   │   │   ├── level.gdshader
+│       │   │   │   ├── level.gdshader.uid
+│       │   │   │   ├── raise.gdshader
+│       │   │   │   ├── raise.gdshader.uid
+│       │   │   │   ├── smooth.gdshader
+│       │   │   │   ├── smooth.gdshader.uid
+│       │   │   │   ├── splat16.gdshader
+│       │   │   │   ├── splat16.gdshader.uid
+│       │   │   │   ├── splat4.gdshader
+│       │   │   │   ├── splat4.gdshader.uid
+│       │   │   │   ├── splat_indexed.gdshader
+│       │   │   │   └── splat_indexed.gdshader.uid
+│       │   │   ├── shapes
+│       │   │   │   ├── acrylic1.exr
+│       │   │   │   ├── acrylic1.exr.import
+│       │   │   │   ├── round0.exr
+│       │   │   │   ├── round0.exr.import
+│       │   │   │   ├── round1.exr
+│       │   │   │   ├── round1.exr.import
+│       │   │   │   ├── round2.exr
+│       │   │   │   ├── round2.exr.import
+│       │   │   │   ├── round3.exr
+│       │   │   │   ├── round3.exr.import
+│       │   │   │   ├── smoke.exr
+│       │   │   │   ├── smoke.exr.import
+│       │   │   │   ├── texture1.exr
+│       │   │   │   ├── texture1.exr.import
+│       │   │   │   ├── thing.exr
+│       │   │   │   ├── thing.exr.import
+│       │   │   │   ├── vegetation1.exr
+│       │   │   │   └── vegetation1.exr.import
+│       │   │   ├── brush_editor.gd
+│       │   │   ├── brush_editor.gd.uid
+│       │   │   ├── brush_editor_overlay.gd
+│       │   │   ├── brush_editor_overlay.gd.uid
+│       │   │   ├── brush_editor_overlay.tscn
+│       │   │   ├── brush_editor.tscn
+│       │   │   ├── brush.gd
+│       │   │   ├── brush.gd.uid
+│       │   │   ├── decal.gd
+│       │   │   ├── decal.gdshader
+│       │   │   ├── decal.gdshader.uid
+│       │   │   ├── decal.gd.uid
+│       │   │   ├── no_blend.gdshader
+│       │   │   ├── no_blend.gdshader.uid
+│       │   │   ├── no_blend_rf.gdshader
+│       │   │   ├── no_blend_rf.gdshader.uid
+│       │   │   ├── painter.gd
+│       │   │   ├── painter.gd.uid
+│       │   │   ├── terrain_painter.gd
+│       │   │   └── terrain_painter.gd.uid
+│       │   ├── detail_editor
+│       │   │   ├── detail_editor.gd
+│       │   │   ├── detail_editor.gd.uid
+│       │   │   └── detail_editor.tscn
+│       │   ├── exporter
+│       │   │   ├── export_image_dialog.gd
+│       │   │   ├── export_image_dialog.gd.uid
+│       │   │   └── export_image_dialog.tscn
+│       │   ├── generator
+│       │   │   ├── shaders
+│       │   │   │   ├── bump2normal.gdshader
+│       │   │   │   ├── bump2normal.gdshader.uid
+│       │   │   │   ├── erode.gdshader
+│       │   │   │   ├── erode.gdshader.uid
+│       │   │   │   ├── perlin_noise.gdshader
+│       │   │   │   └── perlin_noise.gdshader.uid
+│       │   │   ├── generator_dialog.gd
+│       │   │   ├── generator_dialog.gd.uid
+│       │   │   ├── generator_dialog.tscn
+│       │   │   ├── texture_generator.gd
+│       │   │   ├── texture_generator.gd.uid
+│       │   │   ├── texture_generator_pass.gd
+│       │   │   └── texture_generator_pass.gd.uid
+│       │   ├── icons
+│       │   │   ├── brush_circle_background.svg
+│       │   │   ├── brush_circle_background.svg.import
+│       │   │   ├── brush_circle.svg
+│       │   │   ├── brush_circle.svg.import
+│       │   │   ├── empty.png
+│       │   │   ├── empty.png.import
+│       │   │   ├── icon_anchor_bottom_left.svg
+│       │   │   ├── icon_anchor_bottom_left.svg.import
+│       │   │   ├── icon_anchor_bottom_right.svg
+│       │   │   ├── icon_anchor_bottom_right.svg.import
+│       │   │   ├── icon_anchor_bottom.svg
+│       │   │   ├── icon_anchor_bottom.svg.import
+│       │   │   ├── icon_anchor_center.svg
+│       │   │   ├── icon_anchor_center.svg.import
+│       │   │   ├── icon_anchor_left.svg
+│       │   │   ├── icon_anchor_left.svg.import
+│       │   │   ├── icon_anchor_right.svg
+│       │   │   ├── icon_anchor_right.svg.import
+│       │   │   ├── icon_anchor_top_left.svg
+│       │   │   ├── icon_anchor_top_left.svg.import
+│       │   │   ├── icon_anchor_top_right.svg
+│       │   │   ├── icon_anchor_top_right.svg.import
+│       │   │   ├── icon_anchor_top.svg
+│       │   │   ├── icon_anchor_top.svg.import
+│       │   │   ├── icon_detail_layer_node.svg
+│       │   │   ├── icon_detail_layer_node.svg.import
+│       │   │   ├── icon_grass.svg
+│       │   │   ├── icon_grass.svg.import
+│       │   │   ├── icon_heightmap_color.svg
+│       │   │   ├── icon_heightmap_color.svg.import
+│       │   │   ├── icon_heightmap_data.svg
+│       │   │   ├── icon_heightmap_data.svg.import
+│       │   │   ├── icon_heightmap_erode.svg
+│       │   │   ├── icon_heightmap_erode.svg.import
+│       │   │   ├── icon_heightmap_flatten.svg
+│       │   │   ├── icon_heightmap_flatten.svg.import
+│       │   │   ├── icon_heightmap_level.svg
+│       │   │   ├── icon_heightmap_level.svg.import
+│       │   │   ├── icon_heightmap_lower.svg
+│       │   │   ├── icon_heightmap_lower.svg.import
+│       │   │   ├── icon_heightmap_mask.svg
+│       │   │   ├── icon_heightmap_mask.svg.import
+│       │   │   ├── icon_heightmap_node_large.svg
+│       │   │   ├── icon_heightmap_node_large.svg.import
+│       │   │   ├── icon_heightmap_node.svg
+│       │   │   ├── icon_heightmap_node.svg.import
+│       │   │   ├── icon_heightmap_paint.svg
+│       │   │   ├── icon_heightmap_paint.svg.import
+│       │   │   ├── icon_heightmap_raise.svg
+│       │   │   ├── icon_heightmap_raise.svg.import
+│       │   │   ├── icon_heightmap_smooth.svg
+│       │   │   ├── icon_heightmap_smooth.svg.import
+│       │   │   ├── icon_heightmap_unmask.svg
+│       │   │   ├── icon_heightmap_unmask.svg.import
+│       │   │   ├── icon_long_arrow_down.svg
+│       │   │   ├── icon_long_arrow_down.svg.import
+│       │   │   ├── icon_long_arrow_right.svg
+│       │   │   ├── icon_long_arrow_right.svg.import
+│       │   │   ├── icon_minimap_out_of_range_position.svg
+│       │   │   ├── icon_minimap_out_of_range_position.svg.import
+│       │   │   ├── icon_minimap_position.svg
+│       │   │   ├── icon_minimap_position.svg.import
+│       │   │   ├── icon_small_circle.svg
+│       │   │   ├── icon_small_circle.svg.import
+│       │   │   ├── white.png
+│       │   │   └── white.png.import
+│       │   ├── importer
+│       │   │   ├── importer_dialog.gd
+│       │   │   ├── importer_dialog.gd.uid
+│       │   │   └── importer_dialog.tscn
+│       │   ├── inspector
+│       │   │   ├── inspector.gd
+│       │   │   ├── inspector.gd.uid
+│       │   │   └── inspector.tscn
+│       │   ├── minimap
+│       │   │   ├── minimap.gd
+│       │   │   ├── minimap.gd.uid
+│       │   │   ├── minimap_normal.gdshader
+│       │   │   ├── minimap_normal.gdshader.uid
+│       │   │   ├── minimap_overlay.gd
+│       │   │   ├── minimap_overlay.gd.uid
+│       │   │   ├── minimap.tscn
+│       │   │   ├── ratio_container.gd
+│       │   │   └── ratio_container.gd.uid
+│       │   ├── packed_textures
+│       │   │   ├── packed_texture_util.gd
+│       │   │   └── packed_texture_util.gd.uid
+│       │   ├── resize_dialog
+│       │   │   ├── resize_dialog.gd
+│       │   │   ├── resize_dialog.gd.uid
+│       │   │   └── resize_dialog.tscn
+│       │   ├── texture_editor
+│       │   │   ├── set_editor
+│       │   │   │   ├── source_file_item_editor.gd
+│       │   │   │   ├── source_file_item_editor.gd.uid
+│       │   │   │   ├── source_file_item_editor.tscn
+│       │   │   │   ├── texture_set_editor.gd
+│       │   │   │   ├── texture_set_editor.gd.uid
+│       │   │   │   ├── texture_set_editor.tscn
+│       │   │   │   ├── texture_set_import_editor.gd
+│       │   │   │   ├── texture_set_import_editor.gd.uid
+│       │   │   │   └── texture_set_import_editor.tscn
+│       │   │   ├── display_alpha.gdshader
+│       │   │   ├── display_alpha.gdshader.uid
+│       │   │   ├── display_alpha_material.tres
+│       │   │   ├── display_alpha_slice.gdshader
+│       │   │   ├── display_alpha_slice.gdshader.uid
+│       │   │   ├── display_color.gdshader
+│       │   │   ├── display_color.gdshader.uid
+│       │   │   ├── display_color_material.tres
+│       │   │   ├── display_color_slice.gdshader
+│       │   │   ├── display_color_slice.gdshader.uid
+│       │   │   ├── display_normal.gdshader
+│       │   │   ├── display_normal.gdshader.uid
+│       │   │   ├── flow_container.gd
+│       │   │   ├── flow_container.gd.uid
+│       │   │   ├── texture_editor.gd
+│       │   │   ├── texture_editor.gd.uid
+│       │   │   ├── texture_editor.tscn
+│       │   │   ├── texture_list.gd
+│       │   │   ├── texture_list.gd.uid
+│       │   │   ├── texture_list_item.gd
+│       │   │   ├── texture_list_item.gd.uid
+│       │   │   ├── texture_list_item.tscn
+│       │   │   └── texture_list.tscn
+│       │   ├── util
+│       │   │   ├── dialog_fitter.gd
+│       │   │   ├── dialog_fitter.gd.uid
+│       │   │   ├── dialog_fitter.tscn
+│       │   │   ├── editor_util.gd
+│       │   │   ├── editor_util.gd.uid
+│       │   │   ├── interval_slider.gd
+│       │   │   ├── interval_slider.gd.uid
+│       │   │   ├── resource_importer_texture.gd
+│       │   │   ├── resource_importer_texture.gd.uid
+│       │   │   ├── resource_importer_texture_layered.gd
+│       │   │   ├── resource_importer_texture_layered.gd.uid
+│       │   │   ├── result.gd
+│       │   │   ├── result.gd.uid
+│       │   │   ├── rich_text_label_hyperlinks.gd
+│       │   │   ├── rich_text_label_hyperlinks.gd.uid
+│       │   │   ├── spin_slider.gd
+│       │   │   ├── spin_slider.gd.uid
+│       │   │   └── spin_slider.tscn
+│       │   ├── bump2normal_tex.gdshader
+│       │   ├── bump2normal_tex.gdshader.uid
+│       │   ├── generate_mesh_dialog.gd
+│       │   ├── generate_mesh_dialog.gd.uid
+│       │   ├── generate_mesh_dialog.tscn
+│       │   ├── globalmap_baker.gd
+│       │   ├── globalmap_baker.gd.uid
+│       │   ├── load_texture_dialog.gd
+│       │   ├── load_texture_dialog.gd.uid
+│       │   ├── normalmap_baker.gd
+│       │   ├── normalmap_baker.gd.uid
+│       │   ├── panel.gd
+│       │   ├── panel.gd.uid
+│       │   ├── panel.tscn
+│       │   ├── plugin.gd
+│       │   ├── plugin.gd.uid
+│       │   ├── preview_generator.gd
+│       │   ├── preview_generator.gd.uid
+│       │   ├── progress_window.gd
+│       │   ├── progress_window.gd.uid
+│       │   ├── progress_window.tscn
+│       │   ├── terrain_preview.gd
+│       │   ├── terrain_preview.gd.uid
+│       │   └── terrain_preview.tscn
+│       ├── util
+│       │   ├── direct_mesh_instance.gd
+│       │   ├── direct_mesh_instance.gd.uid
+│       │   ├── direct_multimesh_instance.gd
+│       │   ├── direct_multimesh_instance.gd.uid
+│       │   ├── errors.gd
+│       │   ├── errors.gd.uid
+│       │   ├── grid.gd
+│       │   ├── grid.gd.uid
+│       │   ├── image_file_cache.gd
+│       │   ├── image_file_cache.gd.uid
+│       │   ├── logger.gd
+│       │   ├── logger.gd.uid
+│       │   ├── util.gd
+│       │   ├── util.gd.uid
+│       │   ├── xyz_format.gd
+│       │   └── xyz_format.gd.uid
+│       ├── hterrain_chunk_debug.gd
+│       ├── hterrain_chunk_debug.gd.uid
+│       ├── hterrain_chunk.gd
+│       ├── hterrain_chunk.gd.uid
+│       ├── hterrain_collider.gd
+│       ├── hterrain_collider.gd.uid
+│       ├── hterrain_data.gd
+│       ├── hterrain_data.gd.uid
+│       ├── hterrain_detail_layer.gd
+│       ├── hterrain_detail_layer.gd.uid
+│       ├── hterrain.gd
+│       ├── hterrain.gd.uid
+│       ├── hterrain_mesher.gd
+│       ├── hterrain_mesher.gd.uid
+│       ├── hterrain_resource_loader.gd
+│       ├── hterrain_resource_loader.gd.uid
+│       ├── hterrain_resource_saver.gd
+│       ├── hterrain_resource_saver.gd.uid
+│       ├── hterrain_texture_set.gd
+│       ├── hterrain_texture_set.gd.uid
+│       ├── LICENSE.md
+│       └── plugin.cfg
+├── Assets
+│   ├── ad
+│   │   ├── cut_barb.png
+│   │   ├── cut_barb.png.import
+│   │   ├── cut_bark.png
+│   │   ├── cut_bark.png.import
+│   │   ├── cut.glb
+│   │   ├── cut.glb.import
+│   │   ├── drive_barb.png
+│   │   ├── drive_barb.png.import
+│   │   ├── drive_bark.png
+│   │   ├── drive_bark.png.import
+│   │   ├── drive.glb
+│   │   ├── drive.glb.import
+│   │   ├── farm_bark.png
+│   │   ├── farm_bark.png.import
+│   │   ├── farm.glb
+│   │   ├── farm.glb.import
+│   │   ├── farm_joe.png
+│   │   ├── farm_joe.png.import
+│   │   ├── joe_bark.png
+│   │   ├── joe_bark.png.import
+│   │   ├── joe.glb
+│   │   ├── joe.glb.import
+│   │   ├── joe_joe.png
+│   │   └── joe_joe.png.import
+│   ├── Boundaries
+│   │   ├── Materials
+│   │   │   ├── Brick_texture_albedo.png
+│   │   │   ├── Brick_texture_albedo.png.import
+│   │   │   ├── Brick_texture_heightmap.png
+│   │   │   ├── Brick_texture_heightmap.png.import
+│   │   │   ├── Brick_texture_normal.png
+│   │   │   ├── Brick_texture_normal.png.import
+│   │   │   ├── Brick_texture_orm.png
+│   │   │   ├── Brick_texture_orm.png.import
+│   │   │   ├── brick_texture.ptex
+│   │   │   └── Brick_texture.tres
+│   │   ├── bridge.blend
+│   │   ├── bridge.blend1
+│   │   ├── bridge.blend.import
+│   │   ├── bridge_road_texture.png
+│   │   ├── bridge_road_texture.png.import
+│   │   ├── wall.blend
+│   │   ├── wall.blend1
+│   │   ├── wall.blend.import
+│   │   ├── wall_brick.jpg.png
+│   │   └── wall_brick.jpg.png.import
+│   ├── Car
+│   │   ├── Mini_cooper
+│   │   │   ├── animation_move_wheels.gd
+│   │   │   ├── animation_move_wheels.gd.uid
+│   │   │   ├── Player1.blend
+│   │   │   ├── Player1.blend1
+│   │   │   ├── Player1.blend.import
+│   │   │   ├── Rob.blend
+│   │   │   ├── Rob.blend.import
+│   │   │   ├── Rob_fin_char.png
+│   │   │   ├── Rob_fin_char.png.import
+│   │   │   ├── Rob.mtl
+│   │   │   ├── Rob.obj
+│   │   │   ├── Rob.obj.import
+│   │   │   ├── Untitled.blend
+│   │   │   ├── Untitled.blend1
+│   │   │   ├── Untitled.blend.import
+│   │   │   ├── Walking.fbx
+│   │   │   └── Walking.fbx.import
+│   │   ├── Porche
+│   │   │   ├── 911.fbx
+│   │   │   ├── 911.fbx.import
+│   │   │   ├── 911.glb
+│   │   │   ├── 911.glb.import
+│   │   │   ├── 911_rust.png
+│   │   │   ├── 911_rust.png.import
+│   │   │   ├── headlight.glb
+│   │   │   ├── headlight.glb.import
+│   │   │   ├── wheels.glb
+│   │   │   └── wheels.glb.import
+│   │   ├── car_lay.png
+│   │   └── car_lay.png.import
+│   ├── Characters
+│   │   ├── heart_texture
+│   │   │   ├── gpth.png
+│   │   │   ├── gpth.png.import
+│   │   │   ├── hg.png
+│   │   │   └── hg.png.import
+│   │   ├── bmw-3-sedan-e90.gif
+│   │   ├── Charlotte.blend
+│   │   ├── Charlotte.blend1
+│   │   ├── Charlotte.blend.import
+│   │   ├── cute_rob_Walking _0.png
+│   │   ├── cute_rob_Walking _0.png.import
+│   │   ├── cute_rob_Walking .fbx
+│   │   ├── cute_rob_Walking .fbx.import
+│   │   ├── cute_rob_walking.gd
+│   │   ├── cute_rob_walking.gd.uid
+│   │   ├── hand.blend
+│   │   ├── hand.blend1
+│   │   ├── hand.blend.import
+│   │   ├── hand_skin_Color.webp
+│   │   ├── hand_skin_Color.webp.import
+│   │   ├── Happy Idle.fbx
+│   │   ├── Happy Idle.fbx.import
+│   │   ├── idle.anim
+│   │   ├── jump.anim
+│   │   ├── Jumping Up.fbx
+│   │   ├── Jumping Up.fbx.import
+│   │   ├── Left Turn.fbx
+│   │   ├── Left Turn.fbx.import
+│   │   ├── neutral.anim
+│   │   ├── Neutral Idle.fbx
+│   │   ├── Neutral Idle.fbx.import
+│   │   ├── Right Turn.fbx
+│   │   ├── Right Turn.fbx.import
+│   │   ├── turn_180.anim
+│   │   ├── turn_left.anim
+│   │   ├── turn_right.anim
+│   │   ├── Untitled.glb
+│   │   ├── Untitled.glb.import
+│   │   ├── Untitled_skin_Color.webp
+│   │   ├── Untitled_skin_Color.webp.import
+│   │   ├── walk_charlotter.anim
+│   │   ├── Walking _charlotte.fbx
+│   │   ├── Walking _charlotte.fbx.import
+│   │   ├── Walking Turn 180.fbx
+│   │   └── Walking Turn 180.fbx.import
+│   ├── Enenmy
+│   │   ├── anim_zom.res
+│   │   ├── attacking.anim
+│   │   ├── attacking.fbx
+│   │   ├── attacking.fbx.import
+│   │   ├── dying.anim
+│   │   ├── Dying.fbx
+│   │   ├── Dying.fbx.import
+│   │   ├── idle.anim
+│   │   ├── Idle.fbx
+│   │   ├── Idle.fbx.import
+│   │   ├── idle_zoom.anim
+│   │   ├── Walking (1).fbx
+│   │   ├── Walking (1).fbx.import
+│   │   ├── walking.anim
+│   │   ├── walking_crawl.anim
+│   │   ├── walking_die.anim
+│   │   ├── walking_dough.anim
+│   │   ├── Walking_inplace.fbx
+│   │   ├── Walking_inplace.fbx.import
+│   │   ├── walking_stand.anim
+│   │   ├── walking_walk.anim
+│   │   ├── Xoors_Cube_2.png
+│   │   ├── Xoors_Cube_2.png.import
+│   │   ├── Xoors_Cube Base Color.png
+│   │   ├── Xoors_Cube Base Color.png.import
+│   │   ├── Xoors_Cube.png
+│   │   ├── Xoors_Cube.png.import
+│   │   ├── Xoors.fbx
+│   │   ├── Xoors.fbx.import
+│   │   ├── Xoors.glb
+│   │   ├── Xoors.glb.import
+│   │   ├── Xoors_painted_0.png
+│   │   ├── Xoors_painted_0.png.import
+│   │   ├── Xoors_painted_1.png
+│   │   ├── Xoors_painted_1.png.import
+│   │   ├── Xoors_painted_2.png
+│   │   ├── Xoors_painted_2.png.import
+│   │   ├── Xoors_painted.fbx
+│   │   ├── Xoors_painted.fbx.import
+│   │   ├── zom_attcking.anim
+│   │   ├── Zombie Attack.fbx
+│   │   ├── Zombie Attack.fbx.import
+│   │   ├── Zombie Crawl.fbx
+│   │   ├── Zombie Crawl.fbx.import
+│   │   ├── Zombie Dying.fbx
+│   │   ├── Zombie Dying.fbx.import
+│   │   ├── Zombie Idle_0.png
+│   │   ├── Zombie Idle_0.png.import
+│   │   ├── Zombie Idle_1.png
+│   │   ├── Zombie Idle_1.png.import
+│   │   ├── Zombie Idle_2.png
+│   │   ├── Zombie Idle_2.png.import
+│   │   ├── Zombie Idle.fbx
+│   │   ├── Zombie Idle.fbx.import
+│   │   ├── Zombie Stand Up.fbx
+│   │   ├── Zombie Stand Up.fbx.import
+│   │   ├── zombie_v1.fbx
+│   │   ├── zombie_v1.fbx.import
+│   │   ├── zombie_v1.mtl
+│   │   ├── zombie_v1.obj
+│   │   ├── zombie_v1.obj.import
+│   │   ├── Zom_Walking.fbx
+│   │   └── Zom_Walking.fbx.import
+│   ├── Font
+│   │   ├── my_final_font.ttf
+│   │   └── my_final_font.ttf.import
+│   ├── Interactables
+│   │   ├── Bat_bat_texture_albedo.png
+│   │   ├── Bat_bat_texture_albedo.png.import
+│   │   ├── Bat_bat_texture_albedo.png.png
+│   │   ├── Bat_bat_texture_albedo.png.png.import
+│   │   ├── Bat.blend
+│   │   ├── Bat.blend.import
+│   │   ├── Bat.glb
+│   │   ├── Bat.glb.import
+│   │   ├── gun.glb
+│   │   ├── gun.glb.import
+│   │   ├── train.blend
+│   │   ├── train.blend1
+│   │   ├── train.blend.import
+│   │   ├── train_istockphoto-1405048879-612x612.png
+│   │   └── train_istockphoto-1405048879-612x612.png.import
+│   ├── lamp
+│   │   ├── lamp.blend
+│   │   ├── lamp.blend1
+│   │   ├── lamp.blend.import
+│   │   ├── lamp_lampligh.png
+│   │   ├── lamp_lampligh.png.import
+│   │   ├── lamp_top_pole.jpg
+│   │   ├── lamp_top_pole.jpg.import
+│   │   ├── wall_light.blend
+│   │   ├── wall_light.blend.import
+│   │   ├── wall_light_wood_texture.png
+│   │   ├── wall_light_wood_texture.png.import
+│   │   ├── zombie_v1.blend
+│   │   ├── zombie_v1.blend1
+│   │   ├── zombie_v1.blend.import
+│   │   ├── zombie_v1.fbx
+│   │   ├── zombie_v1.fbx.import
+│   │   ├── zombie_v1_zombie_uv.png
+│   │   └── zombie_v1_zombie_uv.png.import
+│   ├── Landscape
+│   │   ├── ground_materials
+│   │   │   ├── bush
+│   │   │   │   ├── grass_bush_bark-tree_bark_mat_normal.png
+│   │   │   │   ├── grass_bush_bark-tree_bark_mat_normal.png.import
+│   │   │   │   ├── grass_bush.glb
+│   │   │   │   ├── grass_bush.glb.import
+│   │   │   │   ├── grass_bush_Realistic Green Foliage Branch.png
+│   │   │   │   ├── grass_bush_Realistic Green Foliage Branch.png.import
+│   │   │   │   ├── grass_bush_tree_bark_mat_normal.png
+│   │   │   │   └── grass_bush_tree_bark_mat_normal.png.import
+│   │   │   ├── fern
+│   │   │   │   ├── fern_1_fern_img.png
+│   │   │   │   ├── fern_1_fern_img.png.import
+│   │   │   │   ├── fern_1.glb
+│   │   │   │   ├── fern_1.glb.import
+│   │   │   │   ├── fern_2_fern_img.png
+│   │   │   │   ├── fern_2_fern_img.png.import
+│   │   │   │   ├── fern_2.glb
+│   │   │   │   └── fern_2.glb.import
+│   │   │   ├── rock
+│   │   │   │   ├── my_rock1.glb
+│   │   │   │   ├── my_rock1.glb.import
+│   │   │   │   ├── my_rock1_rock_moss_albedo-rock_moss_normal.png
+│   │   │   │   ├── my_rock1_rock_moss_albedo-rock_moss_normal.png.import
+│   │   │   │   ├── my_rock1_rock_moss_normal.png
+│   │   │   │   ├── my_rock1_rock_moss_normal.png.import
+│   │   │   │   ├── my_rock2.glb
+│   │   │   │   ├── my_rock2.glb.import
+│   │   │   │   ├── my_rock2_rock_moss_albedo-rock_moss_normal.png
+│   │   │   │   ├── my_rock2_rock_moss_albedo-rock_moss_normal.png.import
+│   │   │   │   ├── my_rock2_rock_moss_normal.png
+│   │   │   │   ├── my_rock2_rock_moss_normal.png.import
+│   │   │   │   ├── my_rock2_weathered_rock_albedo-weathered_rock_normal.png
+│   │   │   │   ├── my_rock2_weathered_rock_albedo-weathered_rock_normal.png.import
+│   │   │   │   ├── my_rock2_weathered_rock_normal.png
+│   │   │   │   ├── my_rock2_weathered_rock_normal.png.import
+│   │   │   │   ├── my_rock3.glb
+│   │   │   │   ├── my_rock3.glb.import
+│   │   │   │   ├── my_rock3_weathered_rock_albedo.png
+│   │   │   │   ├── my_rock3_weathered_rock_albedo.png.import
+│   │   │   │   ├── my_rock3_weathered_rock_albedo-weathered_rock_normal.png
+│   │   │   │   ├── my_rock3_weathered_rock_albedo-weathered_rock_normal.png.import
+│   │   │   │   ├── my_rock3_weathered_rock_normal.png
+│   │   │   │   ├── my_rock3_weathered_rock_normal.png.import
+│   │   │   │   ├── rock4_crack_rock_albedo.png
+│   │   │   │   ├── rock4_crack_rock_albedo.png.import
+│   │   │   │   ├── rock4_crack_rock_displace.png
+│   │   │   │   ├── rock4_crack_rock_displace.png.import
+│   │   │   │   ├── rock4_crack_rock_normal.png
+│   │   │   │   ├── rock4_crack_rock_normal.png.import
+│   │   │   │   ├── rock4.glb
+│   │   │   │   ├── rock4.glb.import
+│   │   │   │   ├── rock5.glb
+│   │   │   │   ├── rock5.glb.import
+│   │   │   │   ├── rock5_rock_moss_albedo.png
+│   │   │   │   ├── rock5_rock_moss_albedo.png.import
+│   │   │   │   ├── rock5_rock_moss_normal.png
+│   │   │   │   ├── rock5_rock_moss_normal.png.import
+│   │   │   │   ├── rock5_weathered_rock_albedo.png
+│   │   │   │   ├── rock5_weathered_rock_albedo.png.import
+│   │   │   │   ├── rock5_weathered_rock_normal.png
+│   │   │   │   ├── rock5_weathered_rock_normal.png.import
+│   │   │   │   ├── rock6.glb
+│   │   │   │   ├── rock6.glb.import
+│   │   │   │   ├── rock6_weathered_rock_albedo.png
+│   │   │   │   ├── rock6_weathered_rock_albedo.png.import
+│   │   │   │   ├── rock6_weathered_rock_normal.png
+│   │   │   │   └── rock6_weathered_rock_normal.png.import
+│   │   │   ├── textures
+│   │   │   │   ├── bridge_materials
+│   │   │   │   │   ├── concrete.jpeg
+│   │   │   │   │   ├── concrete.jpeg.import
+│   │   │   │   │   ├── pathway.jpeg
+│   │   │   │   │   └── pathway.jpeg.import
+│   │   │   │   ├── aerial_rocks_04_diff_4k.jpg
+│   │   │   │   ├── aerial_rocks_04_diff_4k.jpg.import
+│   │   │   │   ├── aerial_rocks_04_disp_4k.png
+│   │   │   │   ├── aerial_rocks_04_disp_4k.png.import
+│   │   │   │   ├── aerial_rocks_04_nor_gl_4k.exr
+│   │   │   │   ├── aerial_rocks_04_nor_gl_4k.exr.import
+│   │   │   │   ├── aerial_rocks_04_rough_4k.jpg
+│   │   │   │   ├── aerial_rocks_04_rough_4k.jpg.import
+│   │   │   │   ├── forest_ground_04_diff_4k.jpg
+│   │   │   │   ├── forest_ground_04_diff_4k.jpg.import
+│   │   │   │   ├── forest_ground_04_disp_4k.png
+│   │   │   │   ├── forest_ground_04_disp_4k.png.import
+│   │   │   │   ├── forest_ground_04_nor_gl_4k.exr
+│   │   │   │   ├── forest_ground_04_nor_gl_4k.exr.import
+│   │   │   │   ├── forest_ground_04_rough_4k.exr
+│   │   │   │   ├── forest_ground_04_rough_4k.exr.import
+│   │   │   │   ├── mountain_albedo.png
+│   │   │   │   ├── mountain_albedo.png.import
+│   │   │   │   ├── mountain_heightmap.png
+│   │   │   │   ├── mountain_heightmap.png.import
+│   │   │   │   ├── mountain_normal.png
+│   │   │   │   ├── mountain_normal.png.import
+│   │   │   │   ├── mountain.tres
+│   │   │   │   ├── normal_ground_albedo.png
+│   │   │   │   ├── normal_ground_albedo.png.import
+│   │   │   │   ├── normal_ground_heightmap.png
+│   │   │   │   ├── normal_ground_heightmap.png.import
+│   │   │   │   ├── normal_ground_normal.png
+│   │   │   │   ├── normal_ground_normal.png.import
+│   │   │   │   ├── normal_ground.tres
+│   │   │   │   ├── rock_face_03_diff_4k.jpg
+│   │   │   │   ├── rock_face_03_diff_4k.jpg.import
+│   │   │   │   ├── rock_face_03_disp_4k.png
+│   │   │   │   ├── rock_face_03_disp_4k.png.import
+│   │   │   │   ├── rock_face_03_nor_gl_4k.exr
+│   │   │   │   ├── rock_face_03_nor_gl_4k.exr.import
+│   │   │   │   ├── rock_face_03_rough_4k.exr
+│   │   │   │   └── rock_face_03_rough_4k.exr.import
+│   │   │   ├── aerial_rocks_04_4k.blend
+│   │   │   ├── aerial_rocks_04_4k.blend.import
+│   │   │   ├── blade_chat_uv.png
+│   │   │   ├── blade_chat_uv.png.import
+│   │   │   ├── final_grass_blade_chat_uv.png
+│   │   │   ├── final_grass_blade_chat_uv.png.import
+│   │   │   ├── final_grass.blend
+│   │   │   ├── final_grass.blend1
+│   │   │   ├── final_grass.blend.import
+│   │   │   ├── forest_ground_04_4k.blend
+│   │   │   ├── forest_ground_04_4k.blend.import
+│   │   │   ├── grass_albedo.png
+│   │   │   ├── grass_albedo.png.import
+│   │   │   ├── grass_fin_blade_chat_uv.png
+│   │   │   ├── grass_fin_blade_chat_uv.png.import
+│   │   │   ├── grass_fin.glb
+│   │   │   ├── grass_fin.glb.import
+│   │   │   ├── grass_fi.png
+│   │   │   ├── grass_fi.png.import
+│   │   │   ├── grass_fucker.gdshader
+│   │   │   ├── grass_fucker.gdshader.uid
+│   │   │   ├── grass_go.webp
+│   │   │   ├── grass_go.webp.import
+│   │   │   ├── grass_mat.tres
+│   │   │   ├── grass_normal.png
+│   │   │   ├── grass_normal.png.import
+│   │   │   ├── grass.tres
+│   │   │   ├── grass_tuft.tres
+│   │   │   ├── rock_boulder_dry.webp
+│   │   │   ├── rock_boulder_dry.webp.import
+│   │   │   ├── rock_face_03_4k.blend
+│   │   │   ├── rock_face_03_4k.blend.import
+│   │   │   ├── wild_grass.glb
+│   │   │   └── wild_grass.glb.import
+│   │   ├── Tree
+│   │   │   ├── Douglas
+│   │   │   │   ├── tree_douglas_ash-tree-bark_albedo.png
+│   │   │   │   ├── tree_douglas_ash-tree-bark_albedo.png.import
+│   │   │   │   ├── tree_douglas_ash-tree-bark_normal-ogl.png
+│   │   │   │   ├── tree_douglas_ash-tree-bark_normal-ogl.png.import
+│   │   │   │   ├── tree_douglas_ash-tree-bark_roughness.png
+│   │   │   │   ├── tree_douglas_ash-tree-bark_roughness.png.import
+│   │   │   │   ├── tree_douglas.blend
+│   │   │   │   ├── tree_douglas.blend1
+│   │   │   │   ├── tree_douglas.blend.import
+│   │   │   │   ├── tree_douglas_c358c141885cfbd0d2fe5c60f845c19b.png
+│   │   │   │   ├── tree_douglas_c358c141885cfbd0d2fe5c60f845c19b.png.import
+│   │   │   │   ├── tree_sway.gd
+│   │   │   │   └── tree_sway.gd.uid
+│   │   │   ├── foliage_Tree
+│   │   │   │   ├── tree_bark_fallen_bark.png
+│   │   │   │   ├── tree_bark_fallen_bark.png.import
+│   │   │   │   ├── tree_bark_fallen.glb
+│   │   │   │   ├── tree_bark_fallen.glb.import
+│   │   │   │   ├── tree_bark_fallen_tree_bark_mat_normal.png
+│   │   │   │   └── tree_bark_fallen_tree_bark_mat_normal.png.import
+│   │   │   ├── maple
+│   │   │   │   ├── maple_ash-tree-bark_albedo.png
+│   │   │   │   ├── maple_ash-tree-bark_albedo.png.import
+│   │   │   │   ├── maple.blend
+│   │   │   │   ├── maple.blend1
+│   │   │   │   ├── maple.blend.import
+│   │   │   │   ├── maple_maple.png
+│   │   │   │   └── maple_maple.png.import
+│   │   │   ├── c358c141885cfbd0d2fe5c60f845c19b.png
+│   │   │   ├── c358c141885cfbd0d2fe5c60f845c19b.png.import
+│   │   │   ├── cutetree_bark.png
+│   │   │   ├── cutetree_bark.png.import
+│   │   │   ├── cutetree.blend
+│   │   │   ├── cutetree.blend1
+│   │   │   ├── cutetree.blend.import
+│   │   │   ├── cutetree_tree_core.png
+│   │   │   ├── cutetree_tree_core.png.import
+│   │   │   ├── f_ing_tree_bark.png
+│   │   │   ├── f_ing_tree_bark.png.import
+│   │   │   ├── f_ing_tree.blend
+│   │   │   ├── f_ing_tree.blend1
+│   │   │   ├── f_ing_tree.blend.import
+│   │   │   ├── f_ing_tree_tree_core.png
+│   │   │   ├── f_ing_tree_tree_core.png.import
+│   │   │   ├── vit.blend
+│   │   │   ├── vit.blend.import
+│   │   │   ├── vit_gpt.png
+│   │   │   ├── vit_gpt.png.import
+│   │   │   ├── vit_tree_bark_mat_albedo.png
+│   │   │   ├── vit_tree_bark_mat_albedo.png.import
+│   │   │   ├── vit_tree_bark_mat_normal.png
+│   │   │   └── vit_tree_bark_mat_normal.png.import
+│   │   ├── fill_grass.gd
+│   │   ├── fill_grass.gd.uid
+│   │   ├── go_grass.blend
+│   │   ├── go_grass.blend1
+│   │   ├── go_grass.blend.import
+│   │   ├── grass.blend
+│   │   ├── grass.blend1
+│   │   ├── grass.blend.import
+│   │   ├── grass_images.png
+│   │   ├── grass_images.png.import
+│   │   ├── grass.jpeg
+│   │   ├── grass.jpeg.import
+│   │   ├── grass_stranded.blend
+│   │   ├── grass_stranded.blend1
+│   │   ├── grass_stranded.blend.import
+│   │   ├── highway_road.blend
+│   │   ├── highway_road.blend1
+│   │   ├── highway_road.blend.import
+│   │   ├── highway_road_road_texture.png
+│   │   ├── highway_road_road_texture.png.import
+│   │   ├── mountain_road.blend
+│   │   ├── mountain_road.blend1
+│   │   ├── mountain_road.blend.import
+│   │   ├── mountain_road_road_texture.png
+│   │   ├── mountain_road_road_texture.png.import
+│   │   ├── race_it
+│   │   └── Untitled.blend1
+│   ├── sound_effs
+│   │   ├── lmg_fire01.mp3
+│   │   ├── lmg_fire01.mp3.import
+│   │   ├── ZombieBiteSFX.mp3
+│   │   ├── ZombieBiteSFX.mp3.import
+│   │   ├── ZombieBonusSFX.mp3
+│   │   ├── ZombieBonusSFX.mp3.import
+│   │   ├── ZombieDamaged2SFX.mp3
+│   │   ├── ZombieDamaged2SFX.mp3.import
+│   │   ├── ZombieDamaged3SFX.mp3
+│   │   ├── ZombieDamaged3SFX.mp3.import
+│   │   ├── ZombieEating2SFX.mp3
+│   │   ├── ZombieEating2SFX.mp3.import
+│   │   ├── ZombieGrowlSFX.mp3
+│   │   ├── ZombieGrowlSFX.mp3.import
+│   │   ├── ZombieIdle2SFX.mp3
+│   │   ├── ZombieIdle2SFX.mp3.import
+│   │   ├── ZombieLaughingSFX.mp3
+│   │   ├── ZombieLaughingSFX.mp3.import
+│   │   ├── ZombieLunge2SFX.mp3
+│   │   ├── ZombieLunge2SFX.mp3.import
+│   │   ├── ZombieSniffing2SFX.mp3
+│   │   ├── ZombieSniffing2SFX.mp3.import
+│   │   ├── ZombieTransformed_SummonedSFX.mp3
+│   │   └── ZombieTransformed_SummonedSFX.mp3.import
+│   ├── traffic_prop
+│   │   ├── cones
+│   │   │   ├── orange cone.glb
+│   │   │   └── orange cone.glb.import
+│   │   ├── no_entry
+│   │   │   ├── no_entry.glb
+│   │   │   ├── no_entry.glb.import
+│   │   │   ├── no_entry_no_entry.webp
+│   │   │   └── no_entry_no_entry.webp.import
+│   │   ├── speed_signs
+│   │   │   ├── speed_lim_90.glb
+│   │   │   ├── speed_lim_90.glb.import
+│   │   │   ├── speed_lim_90_speed_90.png
+│   │   │   └── speed_lim_90_speed_90.png.import
+│   │   ├── stop_sign
+│   │   │   ├── stop.glb
+│   │   │   ├── stop.glb.import
+│   │   │   ├── stop_stop.png
+│   │   │   └── stop_stop.png.import
+│   │   └── under_cons
+│   │       ├── under_cons.glb
+│   │       ├── under_cons.glb.import
+│   │       ├── under_cons_und_cons.png
+│   │       └── under_cons_und_cons.png.import
+│   ├── g_k.png
+│   ├── g_k.png.import
+│   └── house
+├── demo
+│   ├── assets
+│   │   ├── meshes
+│   │   │   ├── Block.obj
+│   │   │   ├── Block.obj.import
+│   │   │   ├── Compass.tscn
+│   │   │   ├── Diamond.obj
+│   │   │   ├── Diamond.obj.import
+│   │   │   ├── Gear.obj
+│   │   │   ├── Gear.obj.import
+│   │   │   ├── Gem.obj
+│   │   │   ├── Gem.obj.import
+│   │   │   ├── Honey.obj
+│   │   │   ├── Honey.obj.import
+│   │   │   ├── KnotTorus.obj
+│   │   │   ├── KnotTorus.obj.import
+│   │   │   ├── RoundCube.obj
+│   │   │   ├── RoundCube.obj.import
+│   │   │   ├── Suzanne.obj
+│   │   │   ├── Suzanne.obj.import
+│   │   │   ├── Teapot.obj
+│   │   │   ├── Teapot.obj.import
+│   │   │   ├── Torus.obj
+│   │   │   ├── Torus.obj.import
+│   │   │   ├── Triangle.obj
+│   │   │   ├── Triangle.obj.import
+│   │   │   ├── TwistedTorus.obj
+│   │   │   └── TwistedTorus.obj.import
+│   │   ├── scenes
+│   │   │   ├── BuildingBlocks.tscn
+│   │   │   └── PrimitivesCity.tscn
+│   │   ├── textures
+│   │   │   ├── ProtGrid0.jpg
+│   │   │   ├── ProtGrid0.jpg.import
+│   │   │   ├── ProtGrid1.jpg
+│   │   │   └── ProtGrid1.jpg.import
+│   │   ├── CameraAttributes.tres
+│   │   └── Environment.tres
+│   └── Sky3DDemo.tscn
+├── house
+│   ├── bricks_build.blend1
+│   ├── bricks_build_brick_2.png
+│   ├── bricks_build_brick_2.png.import
+│   ├── building_1_brick.png
+│   ├── building_1_brick.png.import
+│   ├── building_1_building.png
+│   ├── building_1_building.png.import
+│   ├── building_1.glb
+│   ├── building_1.glb.import
+│   ├── house_461223129.jpg
+│   ├── house_461223129.jpg.import
+│   ├── house_front_side.png
+│   ├── house_front_side.png.import
+│   ├── house_garage_door.png
+│   ├── house_garage_door.png.import
+│   ├── house_Gemini_Generated_Image_o15p9lo15p9lo15p.png
+│   ├── house_Gemini_Generated_Image_o15p9lo15p9lo15p.png.import
+│   ├── house.glb
+│   ├── house.glb.import
+│   ├── house_roof_top_blue.png
+│   ├── house_roof_top_blue.png.import
+│   ├── house_window.png
+│   ├── house_window.png.import
+│   ├── house_wood_text.jpg
+│   ├── house_wood_text.jpg.import
+│   ├── local_arab_house_Arabian House Cross-Layout Texture Atlas.png
+│   ├── local_arab_house_Arabian House Cross-Layout Texture Atlas.png.import
+│   ├── local_arab_house.blend
+│   ├── local_arab_house.blend1
+│   ├── local_arab_house.blend.import
+│   ├── quit_bark.png
+│   ├── quit_bark.png.import
+│   ├── quit.blend
+│   ├── quit.blend1
+│   ├── quit.blend.import
+│   ├── quit_castle_walls_short.jpg
+│   ├── quit_castle_walls_short.jpg.import
+│   ├── quit_old-rusty-wooden-gothic-door-detail-4517054.webp
+│   ├── quit_old-rusty-wooden-gothic-door-detail-4517054.webp.import
+│   ├── quit_scrapstuccowbrickplain.jpg
+│   ├── quit_scrapstuccowbrickplain.jpg.import
+│   ├── structure.blend
+│   ├── structure.blend.import
+│   ├── structure_brick.png
+│   └── structure_brick.png.import
+├── HTerrain
+│   ├── color.png
+│   ├── color.png.import
+│   ├── data.hterrain
+│   ├── data.hterrain.uid
+│   ├── detail.png
+│   ├── detail.png.import
+│   ├── global_albedo.png
+│   ├── global_albedo.png.import
+│   ├── height.res
+│   ├── normal.png
+│   ├── normal.png.import
+│   ├── splat2.png
+│   ├── splat2.png.import
+│   ├── splat3.png
+│   ├── splat3.png.import
+│   ├── splat4.png
+│   ├── splat4.png.import
+│   ├── splat.png
+│   └── splat.png.import
+├── Node3D
+│   ├── Color_0_0.res
+│   └── Heightmap_0_0.res
+├── Scene
+│   ├── 1grass_fin.tscn
+│   ├── back_up_grass.tres
+│   ├── grass_fin.tscn
+│   ├── grass_mesh.tres
+│   └── lake.tscn
+├── Scripts
+│   ├── Vehicle_manager.gd
+│   └── Vehicle_manager.gd.uid
+├── shader
+│   ├── simple4_1.gdshader
+│   └── simple4_1.gdshader.uid
+├── Shader
+│   ├── ripple.gdshader
+│   ├── ripple.gdshader.uid
+│   ├── underwater.gdshader
+│   ├── underwater.gdshader.uid
+│   ├── water_shader.gdshader
+│   └── water_shader.gdshader.uid
+├── terrain3d
+├── ActCar.cs
+├── ActCar.cs.uid
+├── act_car.gd
+├── act_car.gd.uid
+├── area_around_vehicle.gd
+├── area_around_vehicle.gd.uid
+├── area_around_vehicle_porche.gd
+├── area_around_vehicle_porche.gd.uid
+├── arms.tscn
+├── bat.tscn
+├── camera.gd
+├── camera.gd.uid
+├── Camerapivot.cs
+├── CameraPivot.cs
+├── Camerapivot.cs.uid
+├── CameraPivot.cs.uid
+├── Car.cs
+├── Car.cs.uid
+├── car_health_bar.gd
+├── car_health_bar.gd.uid
+├── crosshair.gd
+├── crosshair.gd.uid
+├── CsgMesh3d.cs
+├── CsgMesh3d.cs.uid
+├── cute_rob_walking_.tscn
+├── .editorconfig
+├── enemy.gd
+├── enemy.gd.uid
+├── gemini_project_context.txt
+├── .gitattributes
+├── .gitignore
+├── goblend.log
+├── gpu_particles_3d.gd
+├── gpu_particles_3d.gd.uid
+├── grass_manager.gd
+├── grass_manager.gd.uid
+├── grass_scatter.gd
+├── grass_scatter.gd.uid
+├── gun.gd
+├── gun.gd.uid
+├── gun.tscn
+├── icon.svg
+├── icon.svg.import
+├── LICENSE
+├── light_weight_shader.gdshader
+├── light_weight_shader.gdshader.uid
+├── MoveCar.cs
+├── MoveCar.cs.uid
+├── new_water_shader.gdshader
+├── new_water_shader.gdshader.uid
+├── perf.gd
+├── perf.gd.uid
+├── player.gd
+├── player.gd.uid
+├── project.godot
+├── push.png
+├── push.png.import
+├── Race_it.csproj
+├── Race_it.sln
+├── README.md
+├── Rob.cs
+├── Rob.cs.uid
+├── rob.gd
+├── rob.gd.uid
+├── root.gdshader
+├── root.gdshader.uid
+├── spring_arm_3d.gd
+├── spring_arm_3d.gd.uid
+├── Start_albedo_bump_array.png
+├── Start_albedo_bump_array.png.import
+├── Start_normal_roughness_array.png
+├── Start_normal_roughness_array.png.import
+├── Start_slot0_albedo_bump.png
+├── Start_slot0_albedo_bump.png.import
+├── Start_slot0_normal_roughness.png
+├── Start_slot0_normal_roughness.png.import
+├── Start_slot1_albedo_bump.png
+├── Start_slot1_albedo_bump.png.import
+├── Start_slot1_normal_roughness.png
+├── Start_slot1_normal_roughness.png.import
+├── Start_slot2_albedo_bump.png
+├── Start_slot2_albedo_bump.png.import
+├── Start_slot2_normal_roughness.png
+├── Start_slot2_normal_roughness.png.import
+├── Start_slot3_albedo_bump.png
+├── Start_slot3_albedo_bump.png.import
+├── Start_slot3_normal_roughness.png
+├── Start_slot3_normal_roughness.png.import
+├── Start.tscn
+├── Start.VoxelGI_data.res
+├── view_pivot.gd
+├── view_pivot.gd.uid
+├── _vm_probe.gd
+├── _vm_probe.gd.uid
+├── water.gd
+├── water.gdshader
+├── water.gdshader.uid
+├── water.gd.uid
+├── water_killer.gd
+├── water_killer.gd.uid
+├── water_shader_lake.gdshader
+├── water_shader_lake.gdshader.uid
+├── weapon_wheel.gd
+├── weapon_wheel.gd.uid
+├── zombie_idle.tscn
+├── zoom.gd
+└── zoom.gd.uid
+
+162 directories, 2095 files
+
+========== PROJECT CONFIGURATION ==========
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Race_it"
+run/main_scene="uid://iw1hqoeg1wv5"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+VehicleManager="*uid://cmxkgl70hhp84"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="Race_it"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sky_3d/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+
+[input]
+
+forward={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+backward={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+left={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+right={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+]
+}
+look_back={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":67,"key_label":0,"unicode":99,"location":0,"echo":false,"script":null)
+]
+}
+hand_brake={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+parking_hand_brake={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+sprint={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+"Weapon wheel"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":71,"key_label":0,"unicode":103,"location":0,"echo":false,"script":null)
+]
+}
+shoot_out={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+
+[layer_names]
+
+3d_render/layer_17="SimpleGrassTextured interactive layer"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+
+========== SCENE AND SCRIPT FILES ==========
+./ActCar.cs
+./act_car.gd
+./addons/road-generator/connectors/terrain3d_road_connector.gd
+./addons/road-generator/custom_containers/3way_1x1.tscn
+./addons/road-generator/custom_containers/3way_2x2.tscn
+./addons/road-generator/custom_containers/4way_1x1.tscn
+./addons/road-generator/custom_containers/4way_2x2.tscn
+./addons/road-generator/custom_containers/highway_offramp.tscn
+./addons/road-generator/custom_containers/highway_onramp.tscn
+./addons/road-generator/custom_containers/roundabout_1x1.tscn
+./addons/road-generator/custom_containers/roundabout_2x2.tscn
+./addons/road-generator/custom_containers/splitter_1x1.tscn
+./addons/road-generator/custom_containers/splitter_2x2.tscn
+./addons/road-generator/nodes/road_container.gd
+./addons/road-generator/nodes/road_graph_node.gd
+./addons/road-generator/nodes/road_intersection.gd
+./addons/road-generator/nodes/road_lane_agent.gd
+./addons/road-generator/nodes/road_lane.gd
+./addons/road-generator/nodes/road_manager.gd
+./addons/road-generator/nodes/road_point.gd
+./addons/road-generator/nodes/road_segment.gd
+./addons/road-generator/plugin.gd
+./addons/road-generator/procgen/intersection_ngon.gd
+./addons/road-generator/procgen/intersection_settings.gd
+./addons/road-generator/procgen/segment_geo.gd
+./addons/road-generator/scene/GizmoLaneIndicator.tscn
+./addons/road-generator/ui/connection_tool.gd
+./addons/road-generator/ui/hidden_gizmo.gdshader
+./addons/road-generator/ui/hidden_gizmo_mat.tres
+./addons/road-generator/ui/rc_submenu.gd
+./addons/road-generator/ui/road_container_edit.gd
+./addons/road-generator/ui/road_container_panel.gd
+./addons/road-generator/ui/road_container_panel.tscn
+./addons/road-generator/ui/road_intersection_gizmo.gd
+./addons/road-generator/ui/road_point_edit.gd
+./addons/road-generator/ui/road_point_gizmo.gd
+./addons/road-generator/ui/road_point_panel.gd
+./addons/road-generator/ui/road_point_panel.tscn
+./addons/road-generator/ui/road_toolbar_create_menu.gd
+./addons/road-generator/ui/road_toolbar.gd
+./addons/road-generator/ui/road_toolbar_settings_menu.gd
+./addons/road-generator/ui/road_toolbar.tscn
+./addons/simplegrasstextured/default_mesh_builder.gd
+./addons/simplegrasstextured/default_mesh.tres
+./addons/simplegrasstextured/grass.gd
+./addons/simplegrasstextured/gui/about.gd
+./addons/simplegrasstextured/gui/about.tscn
+./addons/simplegrasstextured/gui/clear_all_confirmation_dialog.gd
+./addons/simplegrasstextured/gui/clear_all_confirmation_dialog.tscn
+./addons/simplegrasstextured/gui/domain_range.gd
+./addons/simplegrasstextured/gui/domain_range.tscn
+./addons/simplegrasstextured/gui/global_parameters.gd
+./addons/simplegrasstextured/gui/global_parameters.tscn
+./addons/simplegrasstextured/gui/toolbar.gd
+./addons/simplegrasstextured/gui/toolbar_menu.gd
+./addons/simplegrasstextured/gui/toolbar_menu.tscn
+./addons/simplegrasstextured/gui/toolbar.tscn
+./addons/simplegrasstextured/gui/toolbar_up.gd
+./addons/simplegrasstextured/gui/toolbar_up.tscn
+./addons/simplegrasstextured/materials/grass.tres
+./addons/simplegrasstextured/materials/icon.tres
+./addons/simplegrasstextured/materials/position.tres
+./addons/simplegrasstextured/plugin.gd
+./addons/simplegrasstextured/sgt_inspector.gd
+./addons/simplegrasstextured/shaders/blur1.gdshader
+./addons/simplegrasstextured/shaders/blur2.gdshader
+./addons/simplegrasstextured/shaders/distance.gdshader
+./addons/simplegrasstextured/shaders/grass.gdshader
+./addons/simplegrasstextured/shaders/grass_linear.gdshader
+./addons/simplegrasstextured/shaders/grass_nearest.gdshader
+./addons/simplegrasstextured/shaders/grass_nearest_mipmap.gdshader
+./addons/simplegrasstextured/shaders/grass_unshaded.gdshader
+./addons/simplegrasstextured/shaders/grass_unshaded_linear.gdshader
+./addons/simplegrasstextured/shaders/grass_unshaded_nearest.gdshader
+./addons/simplegrasstextured/shaders/grass_unshaded_nearest_mipmap.gdshader
+./addons/simplegrasstextured/shaders/motion1.gdshader
+./addons/simplegrasstextured/shaders/motion2.gdshader
+./addons/simplegrasstextured/shaders/normal.gdshader
+./addons/simplegrasstextured/shaders/position.gdshader
+./addons/simplegrasstextured/singleton.gd
+./addons/simplegrasstextured/singleton.tscn
+./addons/simplex_terrain/demo/biomes/alpine_peaks.tres
+./addons/simplex_terrain/demo/biomes/badlands_oasis.tres
+./addons/simplex_terrain/demo/biomes/desert.tres
+./addons/simplex_terrain/demo/biomes/eldritch_canyonlands.tres
+./addons/simplex_terrain/demo/biomes/everest_range.tres
+./addons/simplex_terrain/demo/biomes/glacial_valley.tres
+./addons/simplex_terrain/demo/biomes/mountains.tres
+./addons/simplex_terrain/demo/biomes/mountain_valleys.tres
+./addons/simplex_terrain/demo/biomes/plains.tres
+./addons/simplex_terrain/demo/biomes/terraced_hills.tres
+./addons/simplex_terrain/demo/FlyCamera.cs
+./addons/simplex_terrain/demo/infinite_demo.tscn
+./addons/simplex_terrain/demo/terrain_assets.tres
+./addons/simplex_terrain/demo/world.tres
+./addons/simplex_terrain/ProceduralTerrainPlugin.cs
+./addons/simplex_terrain/src/Core/Data/ChunkCoordinate.cs
+./addons/simplex_terrain/src/Core/Data/HeightMatrix.cs
+./addons/simplex_terrain/src/Core/Data/InstanceSet.cs
+./addons/simplex_terrain/src/Core/Data/SplatWeightSet.cs
+./addons/simplex_terrain/src/Core/Data/SplineSet.cs
+./addons/simplex_terrain/src/Core/Export/JsonGraphSerializer.cs
+./addons/simplex_terrain/src/Core/Export/MeshCompiler.cs
+./addons/simplex_terrain/src/Core/Export/PrefabBaker.cs
+./addons/simplex_terrain/src/Core/Gpu/GpuTerrain.cs
+./addons/simplex_terrain/src/Core/Graph/ConnectionData.cs
+./addons/simplex_terrain/src/Core/Graph/GraphCommentData.cs
+./addons/simplex_terrain/src/Core/Graph/GraphEvaluator.cs
+./addons/simplex_terrain/src/Core/Graph/GraphFrameData.cs
+./addons/simplex_terrain/src/Core/Graph/SharedVariablesResource.cs
+./addons/simplex_terrain/src/Core/Graph/TerrainGraphResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/DummyConstantNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/DummyNodes.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/DummyPassthroughNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/INoiseSource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/LoopInputNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/LoopNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/LoopNodes.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/LoopOutputNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/NoiseMath.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/PortalNodes.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/PortalReceiverNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/PortalTransmitterNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/Port.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/TerrainNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Base/TerrainNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Biome/BiomeBlendNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Biome/BiomeBlendNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Biome/BiomeReferenceNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Biome/BiomeReferenceNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Biome/WhittakerLookupNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Biome/WhittakerLookupNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/AspectMapperNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/AspectMapperNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/BeachNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/BeachNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/BlendNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/BlendNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/BlurNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/BlurNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/CavityNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/CavityNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/CurveNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/CurveNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/ErosionNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/ErosionNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/FractalNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/FractalNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/IslandMaskNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/IslandMaskNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/LakeExcavatorNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/LakeExcavatorNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/LedgeNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/LedgeNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/LevelsNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/LevelsNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/OceanLevelNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/OceanLevelNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/ParallaxDisplacementNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/ParallaxDisplacementNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/PerlinNoiseNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/PerlinNoiseNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/PrimitiveFormNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/PrimitiveFormNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/RiverGeneratorNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/RiverGeneratorNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/SlopeNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/SlopeNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/SplatNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/SplatNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/SpotNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/SpotNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/TerraceNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/TerraceNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/TextureInputNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/TextureInputNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/VoronoiNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Height/VoronoiNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/HeightmapExportNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/HeightmapExportNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/HeightOutputNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/HeightOutputNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/Terrain3DControlOutputNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/Terrain3DControlOutputNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/Terrain3DInstancerOutputNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Output/Terrain3DInstancerOutputNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/CoordinateMapping.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ExcavationNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ExcavationNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/FoliageDensityNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/FoliageDensityNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ForestSimulationNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ForestSimulationNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ParticleSlidingNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ParticleSlidingNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ProximityDecimationNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ProximityDecimationNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/PruneNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/PruneNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/RadialDispersalNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/RadialDispersalNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ScatterNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/ScatterNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/TerrainSnapNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Scatter/TerrainSnapNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/DijkstraPathNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/DijkstraPathNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/GabrielGraphNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/GabrielGraphNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineClipNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineClipNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineConformNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineConformNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineInputNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineInputNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineMath.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineOptimizeNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineOptimizeNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineRelaxNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineRelaxNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineStrokeNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineStrokeNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineSubdivideNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineSubdivideNodeResource.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineWeldCloseNode.cs
+./addons/simplex_terrain/src/Core/Nodes/Spline/SplineWeldCloseNodeResource.cs
+./addons/simplex_terrain/src/Core/Threading/ChunkPayload.cs
+./addons/simplex_terrain/src/Core/Threading/GenerationContext.cs
+./addons/simplex_terrain/src/Core/Threading/TerrainScheduler.cs
+./addons/simplex_terrain/src/Editor/GraphEditor/PinBoardPanel.cs
+./addons/simplex_terrain/src/Editor/GraphEditor/PortConnector.cs
+./addons/simplex_terrain/src/Editor/GraphEditor/TerrainGraphComment.cs
+./addons/simplex_terrain/src/Editor/GraphEditor/TerrainGraphEdit.cs
+./addons/simplex_terrain/src/Editor/GraphEditor/TerrainGraphEditor.cs
+./addons/simplex_terrain/src/Editor/GraphEditor/TerrainGraphFrame.cs
+./addons/simplex_terrain/src/Editor/GraphEditor/TerrainGraphNode.cs
+./addons/simplex_terrain/src/Editor/Inspectors/NodePropertyDrawer.cs
+./addons/simplex_terrain/src/Integration/Terrain3D/ControlMapPacker.cs
+./addons/simplex_terrain/src/Integration/Terrain3D/TerrainManager.cs
+./addons/sky_3d/assets/resources/SNoise.tres
+./addons/sky_3d/assets/resources/SunMoonLightFade.tres
+./addons/sky_3d/shaders/AtmFog.gdshader
+./addons/sky_3d/shaders/SkyMaterial.gdshader
+./addons/sky_3d/src/OrbitalElements.gd
+./addons/sky_3d/src/Plugin.gd
+./addons/sky_3d/src/ScatterLib.gd
+./addons/sky_3d/src/Sky3D.gd
+./addons/sky_3d/src/SkyDome.gd
+./addons/sky_3d/src/TimeOfDay.gd
+./addons/sky_3d/src/TOD_Math.gd
+./addons/terrabrush/CSharpWrapper/Enums.cs
+./addons/terrabrush/CSharpWrapper/Misc/TerrainPositionInformation.cs
+./addons/terrabrush/CSharpWrapper/Resources/FoliageDefinitionResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/FoliageResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/MetaInfoLayerResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/ObjectDefinitionResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/ObjectOctreeLODDefinitionResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/ObjectOctreeLODMeshDefinitionResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/ObjectOctreeLODMeshesDefinitionResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/ObjectResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/SnowResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/TextureSetResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/TextureSetsResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/WaterResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/ZoneResource.cs
+./addons/terrabrush/CSharpWrapper/Resources/ZonesResource.cs
+./addons/terrabrush/CSharpWrapper/TerraBrush.cs
+./addons/terrabrush/CSharpWrapper/TerraBrushEditor.cs
+./addons/terrabrush/Resources/DefaultNoise.tres
+./addons/terrabrush/Resources/Shaders/clipmap_shader.gdshader
+./addons/terrabrush/Resources/Shaders/decal_sphere_shader.gdshader
+./addons/terrabrush/Resources/Shaders/foliage_multimesh_shader.gdshader
+./addons/terrabrush/Resources/Shaders/foliage_shader.gdshader
+./addons/terrabrush/Resources/Shaders/heightmap_clipmap_shader.gdshader
+./addons/terrabrush/Resources/Shaders/heightmap_shader.tres
+./addons/terrabrush/Resources/Shaders/snow_clipmap_shader.gdshader
+./addons/terrabrush/Resources/Shaders/terrain_texture_shader.gdshader
+./addons/terrabrush/Resources/Shaders/water_clipmap_shader.gdshader
+./addons/terrabrush/Resources/Shaders/water_ripple_buffer_shader.gdshader
+./addons/terrabrush/Resources/Shaders/water_ripple_shader.gdshader
+./addons/terrain_3d/extras/3rd_party/import_sgt.gd
+./addons/terrain_3d/extras/3rd_party/project_on_terrain3d.gd
+./addons/terrain_3d/extras/particle_example/grass.gdshader
+./addons/terrain_3d/extras/particle_example/grass_material.tres
+./addons/terrain_3d/extras/particle_example/particles.gdshader
+./addons/terrain_3d/extras/particle_example/process_material.tres
+./addons/terrain_3d/extras/particle_example/terrain_3D_particles.gd
+./addons/terrain_3d/extras/particle_example/Terrain3DParticles.tscn
+./addons/terrain_3d/extras/shaders/lightweight.gdshader
+./addons/terrain_3d/extras/shaders/minimum.gdshader
+./addons/terrain_3d/menu/bake_lod_dialog.gd
+./addons/terrain_3d/menu/bake_lod_dialog.tscn
+./addons/terrain_3d/menu/baker.gd
+./addons/terrain_3d/menu/channel_packer_dragdrop.gd
+./addons/terrain_3d/menu/channel_packer.gd
+./addons/terrain_3d/menu/channel_packer.tscn
+./addons/terrain_3d/menu/directory_setup.gd
+./addons/terrain_3d/menu/directory_setup.tscn
+./addons/terrain_3d/menu/terrain_menu.gd
+./addons/terrain_3d/src/asset_dock_45.gd
+./addons/terrain_3d/src/asset_dock_45.tscn
+./addons/terrain_3d/src/asset_dock.gd
+./addons/terrain_3d/src/asset_dock.tscn
+./addons/terrain_3d/src/double_slider.gd
+./addons/terrain_3d/src/editor_plugin.gd
+./addons/terrain_3d/src/gradient_operation_builder.gd
+./addons/terrain_3d/src/multi_picker.gd
+./addons/terrain_3d/src/operation_builder.gd
+./addons/terrain_3d/src/region_gizmo.gd
+./addons/terrain_3d/src/toolbar.gd
+./addons/terrain_3d/src/tool_settings.gd
+./addons/terrain_3d/src/ui.gd
+./addons/terrain_3d/tools/importer.gd
+./addons/terrain_3d/tools/importer.tscn
+./addons/terrain_3d/tools/region_mover.gd
+./addons/terrain_3d/utils/terrain_3d_objects.gd
+./addons/terrain_3d/utils/transform_changed_notifier.gd
+./addons/zylann.hterrain/hterrain_chunk_debug.gd
+./addons/zylann.hterrain/hterrain_chunk.gd
+./addons/zylann.hterrain/hterrain_collider.gd
+./addons/zylann.hterrain/hterrain_data.gd
+./addons/zylann.hterrain/hterrain_detail_layer.gd
+./addons/zylann.hterrain/hterrain.gd
+./addons/zylann.hterrain/hterrain_mesher.gd
+./addons/zylann.hterrain/hterrain_resource_loader.gd
+./addons/zylann.hterrain/hterrain_resource_saver.gd
+./addons/zylann.hterrain/hterrain_texture_set.gd
+./addons/zylann.hterrain/native/factory.gd
+./addons/zylann.hterrain/native/image_utils_generic.gd
+./addons/zylann.hterrain/native/quad_tree_lod_generic.gd
+./addons/zylann.hterrain/shaders/array.gdshader
+./addons/zylann.hterrain/shaders/array_global.gdshader
+./addons/zylann.hterrain/shaders/detail.gdshader
+./addons/zylann.hterrain/shaders/lookdev.gdshader
+./addons/zylann.hterrain/shaders/low_poly.gdshader
+./addons/zylann.hterrain/shaders/multisplat16.gdshader
+./addons/zylann.hterrain/shaders/multisplat16_global.gdshader
+./addons/zylann.hterrain/shaders/multisplat16_lite.gdshader
+./addons/zylann.hterrain/shaders/simple4.gdshader
+./addons/zylann.hterrain/shaders/simple4_global.gdshader
+./addons/zylann.hterrain/shaders/simple4_lite.gdshader
+./addons/zylann.hterrain/tools/about/about_dialog.gd
+./addons/zylann.hterrain/tools/about/about_dialog.tscn
+./addons/zylann.hterrain/tools/brush/brush_editor.gd
+./addons/zylann.hterrain/tools/brush/brush_editor_overlay.gd
+./addons/zylann.hterrain/tools/brush/brush_editor_overlay.tscn
+./addons/zylann.hterrain/tools/brush/brush_editor.tscn
+./addons/zylann.hterrain/tools/brush/brush.gd
+./addons/zylann.hterrain/tools/brush/decal.gd
+./addons/zylann.hterrain/tools/brush/decal.gdshader
+./addons/zylann.hterrain/tools/brush/no_blend.gdshader
+./addons/zylann.hterrain/tools/brush/no_blend_rf.gdshader
+./addons/zylann.hterrain/tools/brush/painter.gd
+./addons/zylann.hterrain/tools/brush/settings_dialog/brush_settings_dialog.gd
+./addons/zylann.hterrain/tools/brush/settings_dialog/brush_settings_dialog.tscn
+./addons/zylann.hterrain/tools/brush/settings_dialog/preview_painter.gd
+./addons/zylann.hterrain/tools/brush/settings_dialog/preview_scratchpad.gd
+./addons/zylann.hterrain/tools/brush/settings_dialog/preview_scratchpad.tscn
+./addons/zylann.hterrain/tools/brush/shaders/alpha.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/color.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/erode.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/flatten.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/level.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/raise.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/smooth.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/splat16.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/splat4.gdshader
+./addons/zylann.hterrain/tools/brush/shaders/splat_indexed.gdshader
+./addons/zylann.hterrain/tools/brush/terrain_painter.gd
+./addons/zylann.hterrain/tools/bump2normal_tex.gdshader
+./addons/zylann.hterrain/tools/detail_editor/detail_editor.gd
+./addons/zylann.hterrain/tools/detail_editor/detail_editor.tscn
+./addons/zylann.hterrain/tools/exporter/export_image_dialog.gd
+./addons/zylann.hterrain/tools/exporter/export_image_dialog.tscn
+./addons/zylann.hterrain/tools/generate_mesh_dialog.gd
+./addons/zylann.hterrain/tools/generate_mesh_dialog.tscn
+./addons/zylann.hterrain/tools/generator/generator_dialog.gd
+./addons/zylann.hterrain/tools/generator/generator_dialog.tscn
+./addons/zylann.hterrain/tools/generator/shaders/bump2normal.gdshader
+./addons/zylann.hterrain/tools/generator/shaders/erode.gdshader
+./addons/zylann.hterrain/tools/generator/shaders/perlin_noise.gdshader
+./addons/zylann.hterrain/tools/generator/texture_generator.gd
+./addons/zylann.hterrain/tools/generator/texture_generator_pass.gd
+./addons/zylann.hterrain/tools/globalmap_baker.gd
+./addons/zylann.hterrain/tools/importer/importer_dialog.gd
+./addons/zylann.hterrain/tools/importer/importer_dialog.tscn
+./addons/zylann.hterrain/tools/inspector/inspector.gd
+./addons/zylann.hterrain/tools/inspector/inspector.tscn
+./addons/zylann.hterrain/tools/load_texture_dialog.gd
+./addons/zylann.hterrain/tools/minimap/minimap.gd
+./addons/zylann.hterrain/tools/minimap/minimap_normal.gdshader
+./addons/zylann.hterrain/tools/minimap/minimap_overlay.gd
+./addons/zylann.hterrain/tools/minimap/minimap.tscn
+./addons/zylann.hterrain/tools/minimap/ratio_container.gd
+./addons/zylann.hterrain/tools/normalmap_baker.gd
+./addons/zylann.hterrain/tools/packed_textures/packed_texture_util.gd
+./addons/zylann.hterrain/tools/panel.gd
+./addons/zylann.hterrain/tools/panel.tscn
+./addons/zylann.hterrain/tools/plugin.gd
+./addons/zylann.hterrain/tools/preview_generator.gd
+./addons/zylann.hterrain/tools/progress_window.gd
+./addons/zylann.hterrain/tools/progress_window.tscn
+./addons/zylann.hterrain/tools/resize_dialog/resize_dialog.gd
+./addons/zylann.hterrain/tools/resize_dialog/resize_dialog.tscn
+./addons/zylann.hterrain/tools/terrain_preview.gd
+./addons/zylann.hterrain/tools/terrain_preview.tscn
+./addons/zylann.hterrain/tools/texture_editor/display_alpha.gdshader
+./addons/zylann.hterrain/tools/texture_editor/display_alpha_material.tres
+./addons/zylann.hterrain/tools/texture_editor/display_alpha_slice.gdshader
+./addons/zylann.hterrain/tools/texture_editor/display_color.gdshader
+./addons/zylann.hterrain/tools/texture_editor/display_color_material.tres
+./addons/zylann.hterrain/tools/texture_editor/display_color_slice.gdshader
+./addons/zylann.hterrain/tools/texture_editor/display_normal.gdshader
+./addons/zylann.hterrain/tools/texture_editor/flow_container.gd
+./addons/zylann.hterrain/tools/texture_editor/set_editor/source_file_item_editor.gd
+./addons/zylann.hterrain/tools/texture_editor/set_editor/source_file_item_editor.tscn
+./addons/zylann.hterrain/tools/texture_editor/set_editor/texture_set_editor.gd
+./addons/zylann.hterrain/tools/texture_editor/set_editor/texture_set_editor.tscn
+./addons/zylann.hterrain/tools/texture_editor/set_editor/texture_set_import_editor.gd
+./addons/zylann.hterrain/tools/texture_editor/set_editor/texture_set_import_editor.tscn
+./addons/zylann.hterrain/tools/texture_editor/texture_editor.gd
+./addons/zylann.hterrain/tools/texture_editor/texture_editor.tscn
+./addons/zylann.hterrain/tools/texture_editor/texture_list.gd
+./addons/zylann.hterrain/tools/texture_editor/texture_list_item.gd
+./addons/zylann.hterrain/tools/texture_editor/texture_list_item.tscn
+./addons/zylann.hterrain/tools/texture_editor/texture_list.tscn
+./addons/zylann.hterrain/tools/util/dialog_fitter.gd
+./addons/zylann.hterrain/tools/util/dialog_fitter.tscn
+./addons/zylann.hterrain/tools/util/editor_util.gd
+./addons/zylann.hterrain/tools/util/interval_slider.gd
+./addons/zylann.hterrain/tools/util/resource_importer_texture.gd
+./addons/zylann.hterrain/tools/util/resource_importer_texture_layered.gd
+./addons/zylann.hterrain/tools/util/result.gd
+./addons/zylann.hterrain/tools/util/rich_text_label_hyperlinks.gd
+./addons/zylann.hterrain/tools/util/spin_slider.gd
+./addons/zylann.hterrain/tools/util/spin_slider.tscn
+./addons/zylann.hterrain/util/direct_mesh_instance.gd
+./addons/zylann.hterrain/util/direct_multimesh_instance.gd
+./addons/zylann.hterrain/util/errors.gd
+./addons/zylann.hterrain/util/grid.gd
+./addons/zylann.hterrain/util/image_file_cache.gd
+./addons/zylann.hterrain/util/logger.gd
+./addons/zylann.hterrain/util/util.gd
+./addons/zylann.hterrain/util/xyz_format.gd
+./area_around_vehicle.gd
+./area_around_vehicle_porche.gd
+./arms.tscn
+./Assets/Boundaries/Materials/Brick_texture.tres
+./Assets/Car/Mini_cooper/animation_move_wheels.gd
+./Assets/Characters/cute_rob_walking.gd
+./Assets/Landscape/fill_grass.gd
+./Assets/Landscape/ground_materials/grass_fucker.gdshader
+./Assets/Landscape/ground_materials/grass_mat.tres
+./Assets/Landscape/ground_materials/grass.tres
+./Assets/Landscape/ground_materials/grass_tuft.tres
+./Assets/Landscape/ground_materials/textures/mountain.tres
+./Assets/Landscape/ground_materials/textures/normal_ground.tres
+./Assets/Landscape/Tree/Douglas/tree_sway.gd
+./bat.tscn
+./camera.gd
+./Camerapivot.cs
+./CameraPivot.cs
+./Car.cs
+./car_health_bar.gd
+./crosshair.gd
+./CsgMesh3d.cs
+./cute_rob_walking_.tscn
+./demo/assets/CameraAttributes.tres
+./demo/assets/Environment.tres
+./demo/assets/meshes/Compass.tscn
+./demo/assets/scenes/BuildingBlocks.tscn
+./demo/assets/scenes/PrimitivesCity.tscn
+./demo/Sky3DDemo.tscn
+./enemy.gd
+./gpu_particles_3d.gd
+./grass_manager.gd
+./grass_scatter.gd
+./gun.gd
+./gun.tscn
+./light_weight_shader.gdshader
+./MoveCar.cs
+./new_water_shader.gdshader
+./perf.gd
+./player.gd
+./Rob.cs
+./rob.gd
+./root.gdshader
+./Scene/1grass_fin.tscn
+./Scene/back_up_grass.tres
+./Scene/grass_fin.tscn
+./Scene/grass_mesh.tres
+./Scene/lake.tscn
+./Scripts/Vehicle_manager.gd
+./Shader/ripple.gdshader
+./shader/simple4_1.gdshader
+./Shader/underwater.gdshader
+./Shader/water_shader.gdshader
+./spring_arm_3d.gd
+./Start.tscn
+./view_pivot.gd
+./_vm_probe.gd
+./water.gd
+./water.gdshader
+./water_killer.gd
+./water_shader_lake.gdshader
+./weapon_wheel.gd
+./zombie_idle.tscn
+./zoom.gd
+
+========== ASSET FILES ==========
+./addons/road-generator/custom_containers/3way_1x1.glb
+./addons/road-generator/custom_containers/3way_2x2.glb
+./addons/road-generator/custom_containers/4way_1x1.glb
+./addons/road-generator/custom_containers/4way_2x2.glb
+./addons/road-generator/custom_containers/highway_offramp.glb
+./addons/road-generator/custom_containers/highway_onramp.glb
+./addons/road-generator/custom_containers/roundabout_1x1.glb
+./addons/road-generator/custom_containers/roundabout_2x2.glb
+./addons/road-generator/custom_containers/splitter_1x1.glb
+./addons/road-generator/custom_containers/splitter_2x2.glb
+./addons/road-generator/custom_containers/src/intersections_source.blend
+./addons/road-generator/resources/road_container.png
+./addons/road-generator/resources/road_intersection.png
+./addons/road-generator/resources/road_lane_agent.png
+./addons/road-generator/resources/road_lane.png
+./addons/road-generator/resources/road_manager.png
+./addons/road-generator/resources/road_point.png
+./addons/road-generator/resources/road_texture@1x.png
+./addons/road-generator/resources/road_texture@2x.png
+./addons/road-generator/resources/road_texture@4x.png
+./addons/road-generator/resources/road_texture.png
+./addons/road-generator/resources/road_uv_grid.png
+./addons/simplegrasstextured/images/motion_frame.png
+./addons/simplegrasstextured/images/motion.png
+./addons/simplegrasstextured/images/normal_frame.png
+./addons/simplegrasstextured/images/normal.png
+./addons/simplegrasstextured/images/pointer.png
+./addons/simplegrasstextured/images/pointer_rect.png
+./addons/simplegrasstextured/images/wind_pattern.png
+./addons/simplegrasstextured/textures/grassbushcc008.png
+./addons/simplex_terrain/demo/textures/Grass003/albedo.png
+./addons/simplex_terrain/demo/textures/Grass003/height.png
+./addons/simplex_terrain/demo/textures/Grass003/normal.png
+./addons/simplex_terrain/demo/textures/Grass003/roughness.png
+./addons/simplex_terrain/demo/textures/Grass008/albedo.png
+./addons/simplex_terrain/demo/textures/Grass008/normal.png
+./addons/simplex_terrain/demo/textures/Ground067/albedo.png
+./addons/simplex_terrain/demo/textures/Ground067/height.png
+./addons/simplex_terrain/demo/textures/Ground067/normal.png
+./addons/simplex_terrain/demo/textures/Ground067/roughness.png
+./addons/simplex_terrain/demo/textures/Ground090/albedo.png
+./addons/simplex_terrain/demo/textures/Ground090/height.png
+./addons/simplex_terrain/demo/textures/Ground090/normal.png
+./addons/simplex_terrain/demo/textures/Ground090/roughness.png
+./addons/simplex_terrain/demo/textures/Ice002/albedo.png
+./addons/simplex_terrain/demo/textures/Ice002/height.png
+./addons/simplex_terrain/demo/textures/Ice002/normal.png
+./addons/simplex_terrain/demo/textures/Ice002/roughness.png
+./addons/simplex_terrain/demo/textures/Rock026/albedo.png
+./addons/simplex_terrain/demo/textures/Rock026/normal.png
+./addons/simplex_terrain/demo/textures/Rock029/albedo.png
+./addons/simplex_terrain/demo/textures/Rock029/height.png
+./addons/simplex_terrain/demo/textures/Rock029/normal.png
+./addons/simplex_terrain/demo/textures/Rock029/roughness.png
+./addons/simplex_terrain/demo/textures/Rock032/albedo.png
+./addons/simplex_terrain/demo/textures/Rock032/height.png
+./addons/simplex_terrain/demo/textures/Rock032/normal.png
+./addons/simplex_terrain/demo/textures/Rock032/roughness.png
+./addons/simplex_terrain/demo/textures/Rock050/albedo.png
+./addons/simplex_terrain/demo/textures/Rock050/height.png
+./addons/simplex_terrain/demo/textures/Rock050/normal.png
+./addons/simplex_terrain/demo/textures/Rock050/roughness.png
+./addons/simplex_terrain/demo/textures/RockFace/albedo.png
+./addons/simplex_terrain/demo/textures/RockFace/normal.png
+./addons/simplex_terrain/demo/textures/RockFace/rock_face_ao_1k.png
+./addons/simplex_terrain/demo/textures/RockFace/rock_face_arm_1k.png
+./addons/simplex_terrain/demo/textures/RockFace/rock_face_disp_1k.png
+./addons/simplex_terrain/demo/textures/RockFace/rock_face_nor_dx_1k.png
+./addons/simplex_terrain/demo/textures/RockFace/roughness.png
+./addons/simplex_terrain/demo/textures/Snow008A/albedo.png
+./addons/simplex_terrain/demo/textures/Snow008A/height.png
+./addons/simplex_terrain/demo/textures/Snow008A/normal.png
+./addons/simplex_terrain/demo/textures/Snow008A/roughness.png
+./addons/simplex_terrain/demo/whittaker_10_biomes.png
+./addons/sky_3d/assets/textures/noise2.png
+./addons/sky_3d/assets/textures/noiseClouds.png
+./addons/sky_3d/assets/textures/noise.jpg
+./addons/sky_3d/assets/textures/SkyIcon.png
+./addons/sky_3d/assets/thirdparty/textures/milkyway/Milkyway.jpg
+./addons/sky_3d/assets/thirdparty/textures/milkyway/StarField.jpg
+./addons/sky_3d/assets/thirdparty/textures/moon/MoonMap.png
+./addons/terrabrush/Assets/Brushes/circle_gradient.png
+./addons/terrabrush/Assets/Brushes/patch.png
+./addons/terrabrush/Assets/Brushes/small_dots.png
+./addons/terrabrush/Assets/Brushes/square.png
+./addons/terrabrush/Assets/Brushes/x_gradient.png
+./addons/terrabrush/Assets/brush_preview.png
+./addons/terrabrush/Assets/button_hover.png
+./addons/terrabrush/Assets/button.png
+./addons/terrabrush/Assets/button_pressed.png
+./addons/terrabrush/Assets/Buttons/circle_sign_white.png
+./addons/terrabrush/Assets/Buttons/circle_white.png
+./addons/terrabrush/Assets/Buttons/square_white.png
+./addons/terrabrush/Assets/circle_filter.png
+./addons/terrabrush/Assets/Icons/color_add.png
+./addons/terrabrush/Assets/Icons/color_remove.png
+./addons/terrabrush/Assets/Icons/flow_add.png
+./addons/terrabrush/Assets/Icons/flow_remove.png
+./addons/terrabrush/Assets/Icons/foliage_add.png
+./addons/terrabrush/Assets/Icons/foliage_remove.png
+./addons/terrabrush/Assets/Icons/holes_add.png
+./addons/terrabrush/Assets/Icons/holes_remove.png
+./addons/terrabrush/Assets/Icons/lock_add.png
+./addons/terrabrush/Assets/Icons/lock_remove.png
+./addons/terrabrush/Assets/Icons/map_add.png
+./addons/terrabrush/Assets/Icons/map_flatten.png
+./addons/terrabrush/Assets/Icons/map_remove.png
+./addons/terrabrush/Assets/Icons/map_set_angle.png
+./addons/terrabrush/Assets/Icons/map_set_height.png
+./addons/terrabrush/Assets/Icons/map_smooth.png
+./addons/terrabrush/Assets/Icons/object_add.png
+./addons/terrabrush/Assets/Icons/object_remove.png
+./addons/terrabrush/Assets/Icons/paint.png
+./addons/terrabrush/Assets/Icons/paint_withdot.png
+./addons/terrabrush/Assets/Icons/snow_add.png
+./addons/terrabrush/Assets/Icons/snow_remove.png
+./addons/terrabrush/Assets/Icons/tag_add.png
+./addons/terrabrush/Assets/Icons/tag_remove.png
+./addons/terrabrush/Assets/Icons/water_add.png
+./addons/terrabrush/Assets/Icons/water_remove.png
+./addons/terrabrush/Assets/placeholder_texture.png
+./addons/terrabrush/Assets/transparency_hover.png
+./addons/terrabrush/Assets/transparency.png
+./addons/terrabrush/Assets/transparency_selected.png
+./addons/terrabrush/Assets/white_circle.png
+./addons/terrabrush/terrabrush_editor_node.png
+./addons/terrabrush/terrabrush_node.png
+./addons/zylann.hterrain/doc/docs/images/alpha_blending_and_depth_blending.png
+./addons/zylann.hterrain/doc/docs/images/bad_array_blending.png
+./addons/zylann.hterrain/doc/docs/images/brush_editor.png
+./addons/zylann.hterrain/doc/docs/images/channel_packer.png
+./addons/zylann.hterrain/doc/docs/images/choose_bullet_physics.png
+./addons/zylann.hterrain/doc/docs/images/color_painting.png
+./addons/zylann.hterrain/doc/docs/images/data_directory_property.png
+./addons/zylann.hterrain/doc/docs/images/default_terrain.png
+./addons/zylann.hterrain/doc/docs/images/detail_layers.png
+./addons/zylann.hterrain/doc/docs/images/dilation.png
+./addons/zylann.hterrain/doc/docs/images/erosion_slope.png
+./addons/zylann.hterrain/doc/docs/images/erosion_steps.png
+./addons/zylann.hterrain/doc/docs/images/generator.png
+./addons/zylann.hterrain/doc/docs/images/gimp_png_preserve_colors.png
+./addons/zylann.hterrain/doc/docs/images/grass_models.png
+./addons/zylann.hterrain/doc/docs/images/hole_painting.png
+./addons/zylann.hterrain/doc/docs/images/ignore_tools_on_export.png
+./addons/zylann.hterrain/doc/docs/images/importer.png
+./addons/zylann.hterrain/doc/docs/images/inspector_texture_set.png
+./addons/zylann.hterrain/doc/docs/images/inspector_texture_set_save.png
+./addons/zylann.hterrain/doc/docs/images/lod_geometry.png
+./addons/zylann.hterrain/doc/docs/images/lookdev_grass.png
+./addons/zylann.hterrain/doc/docs/images/lookdev_menu.png
+./addons/zylann.hterrain/doc/docs/images/lots_of_textures_blending.png
+./addons/zylann.hterrain/doc/docs/images/low_poly.png
+./addons/zylann.hterrain/doc/docs/images/normalmap_conventions.png
+./addons/zylann.hterrain/doc/docs/images/overview.png
+./addons/zylann.hterrain/doc/docs/images/panel_import_button.png
+./addons/zylann.hterrain/doc/docs/images/panel_textures_edit_button.png
+./addons/zylann.hterrain/doc/docs/images/pbr_textures.png
+./addons/zylann.hterrain/doc/docs/images/resize_tool.png
+./addons/zylann.hterrain/doc/docs/images/sculpting_tools.png
+./addons/zylann.hterrain/doc/docs/images/single_sampling_and_triplanar_sampling.png
+./addons/zylann.hterrain/doc/docs/images/slope_limit_tool.png
+./addons/zylann.hterrain/doc/docs/images/splatmap_and_textured_result.png
+./addons/zylann.hterrain/doc/docs/images/texture_array_import_dock.png
+./addons/zylann.hterrain/doc/docs/images/texture_atlas_example.png
+./addons/zylann.hterrain/doc/docs/images/texture_dialog.png
+./addons/zylann.hterrain/doc/docs/images/texture_set_editor.png
+./addons/zylann.hterrain/doc/docs/images/texture_set_import_tool_directory.png
+./addons/zylann.hterrain/doc/docs/images/texture_set_import_tool.png
+./addons/zylann.hterrain/doc/docs/images/texture_set_import_tool_success.png
+./addons/zylann.hterrain/doc/docs/images/texture_set_import_tool_texture_types.png
+./addons/zylann.hterrain/doc/docs/images/texture_slots.png
+./addons/zylann.hterrain/doc/docs/images/tiling_artifacts.png
+./addons/zylann.hterrain/doc/docs/images/tiling_reduction.png
+./addons/zylann.hterrain/doc/docs/images/transition_array_blending.png
+./addons/zylann.hterrain/doc/docs/images/update_editor_collider.png
+./addons/zylann.hterrain/doc/docs/images/warped_checker_variations.png
+./addons/zylann.hterrain/models/grass_quad.obj
+./addons/zylann.hterrain/models/grass_quad_x2.obj
+./addons/zylann.hterrain/models/grass_quad_x3.obj
+./addons/zylann.hterrain/models/grass_quad_x4.obj
+./addons/zylann.hterrain/tools/icons/empty.png
+./addons/zylann.hterrain/tools/icons/white.png
+./Assets/ad/cut_barb.png
+./Assets/ad/cut_bark.png
+./Assets/ad/cut.glb
+./Assets/ad/drive_barb.png
+./Assets/ad/drive_bark.png
+./Assets/ad/drive.glb
+./Assets/ad/farm_bark.png
+./Assets/ad/farm.glb
+./Assets/ad/farm_joe.png
+./Assets/ad/joe_bark.png
+./Assets/ad/joe.glb
+./Assets/ad/joe_joe.png
+./Assets/Boundaries/bridge.blend
+./Assets/Boundaries/bridge_road_texture.png
+./Assets/Boundaries/Materials/Brick_texture_albedo.png
+./Assets/Boundaries/Materials/Brick_texture_heightmap.png
+./Assets/Boundaries/Materials/Brick_texture_normal.png
+./Assets/Boundaries/Materials/Brick_texture_orm.png
+./Assets/Boundaries/wall.blend
+./Assets/Boundaries/wall_brick.jpg.png
+./Assets/Car/car_lay.png
+./Assets/Car/Mini_cooper/Player1.blend
+./Assets/Car/Mini_cooper/Rob.blend
+./Assets/Car/Mini_cooper/Rob_fin_char.png
+./Assets/Car/Mini_cooper/Rob.obj
+./Assets/Car/Mini_cooper/Untitled.blend
+./Assets/Car/Mini_cooper/Walking.fbx
+./Assets/Car/Porche/911.fbx
+./Assets/Car/Porche/911.glb
+./Assets/Car/Porche/911_rust.png
+./Assets/Car/Porche/headlight.glb
+./Assets/Car/Porche/wheels.glb
+./Assets/Characters/Charlotte.blend
+./Assets/Characters/cute_rob_Walking _0.png
+./Assets/Characters/cute_rob_Walking .fbx
+./Assets/Characters/hand.blend
+./Assets/Characters/hand_skin_Color.webp
+./Assets/Characters/Happy Idle.fbx
+./Assets/Characters/heart_texture/gpth.png
+./Assets/Characters/heart_texture/hg.png
+./Assets/Characters/Jumping Up.fbx
+./Assets/Characters/Left Turn.fbx
+./Assets/Characters/Neutral Idle.fbx
+./Assets/Characters/Right Turn.fbx
+./Assets/Characters/Untitled.glb
+./Assets/Characters/Untitled_skin_Color.webp
+./Assets/Characters/Walking _charlotte.fbx
+./Assets/Characters/Walking Turn 180.fbx
+./Assets/Enenmy/attacking.fbx
+./Assets/Enenmy/Dying.fbx
+./Assets/Enenmy/Idle.fbx
+./Assets/Enenmy/Walking (1).fbx
+./Assets/Enenmy/Walking_inplace.fbx
+./Assets/Enenmy/Xoors_Cube_2.png
+./Assets/Enenmy/Xoors_Cube Base Color.png
+./Assets/Enenmy/Xoors_Cube.png
+./Assets/Enenmy/Xoors.fbx
+./Assets/Enenmy/Xoors.glb
+./Assets/Enenmy/Xoors_painted_0.png
+./Assets/Enenmy/Xoors_painted_1.png
+./Assets/Enenmy/Xoors_painted_2.png
+./Assets/Enenmy/Xoors_painted.fbx
+./Assets/Enenmy/Zombie Attack.fbx
+./Assets/Enenmy/Zombie Crawl.fbx
+./Assets/Enenmy/Zombie Dying.fbx
+./Assets/Enenmy/Zombie Idle_0.png
+./Assets/Enenmy/Zombie Idle_1.png
+./Assets/Enenmy/Zombie Idle_2.png
+./Assets/Enenmy/Zombie Idle.fbx
+./Assets/Enenmy/Zombie Stand Up.fbx
+./Assets/Enenmy/zombie_v1.fbx
+./Assets/Enenmy/zombie_v1.obj
+./Assets/Enenmy/Zom_Walking.fbx
+./Assets/g_k.png
+./Assets/Interactables/Bat_bat_texture_albedo.png
+./Assets/Interactables/Bat_bat_texture_albedo.png.png
+./Assets/Interactables/Bat.blend
+./Assets/Interactables/Bat.glb
+./Assets/Interactables/gun.glb
+./Assets/Interactables/train.blend
+./Assets/Interactables/train_istockphoto-1405048879-612x612.png
+./Assets/lamp/lamp.blend
+./Assets/lamp/lamp_lampligh.png
+./Assets/lamp/lamp_top_pole.jpg
+./Assets/lamp/wall_light.blend
+./Assets/lamp/wall_light_wood_texture.png
+./Assets/lamp/zombie_v1.blend
+./Assets/lamp/zombie_v1.fbx
+./Assets/lamp/zombie_v1_zombie_uv.png
+./Assets/Landscape/go_grass.blend
+./Assets/Landscape/grass.blend
+./Assets/Landscape/grass_images.png
+./Assets/Landscape/grass_stranded.blend
+./Assets/Landscape/ground_materials/aerial_rocks_04_4k.blend
+./Assets/Landscape/ground_materials/blade_chat_uv.png
+./Assets/Landscape/ground_materials/bush/grass_bush_bark-tree_bark_mat_normal.png
+./Assets/Landscape/ground_materials/bush/grass_bush.glb
+./Assets/Landscape/ground_materials/bush/grass_bush_Realistic Green Foliage Branch.png
+./Assets/Landscape/ground_materials/bush/grass_bush_tree_bark_mat_normal.png
+./Assets/Landscape/ground_materials/fern/fern_1_fern_img.png
+./Assets/Landscape/ground_materials/fern/fern_1.glb
+./Assets/Landscape/ground_materials/fern/fern_2_fern_img.png
+./Assets/Landscape/ground_materials/fern/fern_2.glb
+./Assets/Landscape/ground_materials/final_grass_blade_chat_uv.png
+./Assets/Landscape/ground_materials/final_grass.blend
+./Assets/Landscape/ground_materials/forest_ground_04_4k.blend
+./Assets/Landscape/ground_materials/grass_albedo.png
+./Assets/Landscape/ground_materials/grass_fin_blade_chat_uv.png
+./Assets/Landscape/ground_materials/grass_fin.glb
+./Assets/Landscape/ground_materials/grass_fi.png
+./Assets/Landscape/ground_materials/grass_go.webp
+./Assets/Landscape/ground_materials/grass_normal.png
+./Assets/Landscape/ground_materials/rock_boulder_dry.webp
+./Assets/Landscape/ground_materials/rock_face_03_4k.blend
+./Assets/Landscape/ground_materials/rock/my_rock1.glb
+./Assets/Landscape/ground_materials/rock/my_rock1_rock_moss_albedo-rock_moss_normal.png
+./Assets/Landscape/ground_materials/rock/my_rock1_rock_moss_normal.png
+./Assets/Landscape/ground_materials/rock/my_rock2.glb
+./Assets/Landscape/ground_materials/rock/my_rock2_rock_moss_albedo-rock_moss_normal.png
+./Assets/Landscape/ground_materials/rock/my_rock2_rock_moss_normal.png
+./Assets/Landscape/ground_materials/rock/my_rock2_weathered_rock_albedo-weathered_rock_normal.png
+./Assets/Landscape/ground_materials/rock/my_rock2_weathered_rock_normal.png
+./Assets/Landscape/ground_materials/rock/my_rock3.glb
+./Assets/Landscape/ground_materials/rock/my_rock3_weathered_rock_albedo.png
+./Assets/Landscape/ground_materials/rock/my_rock3_weathered_rock_albedo-weathered_rock_normal.png
+./Assets/Landscape/ground_materials/rock/my_rock3_weathered_rock_normal.png
+./Assets/Landscape/ground_materials/rock/rock4_crack_rock_albedo.png
+./Assets/Landscape/ground_materials/rock/rock4_crack_rock_displace.png
+./Assets/Landscape/ground_materials/rock/rock4_crack_rock_normal.png
+./Assets/Landscape/ground_materials/rock/rock4.glb
+./Assets/Landscape/ground_materials/rock/rock5.glb
+./Assets/Landscape/ground_materials/rock/rock5_rock_moss_albedo.png
+./Assets/Landscape/ground_materials/rock/rock5_rock_moss_normal.png
+./Assets/Landscape/ground_materials/rock/rock5_weathered_rock_albedo.png
+./Assets/Landscape/ground_materials/rock/rock5_weathered_rock_normal.png
+./Assets/Landscape/ground_materials/rock/rock6.glb
+./Assets/Landscape/ground_materials/rock/rock6_weathered_rock_albedo.png
+./Assets/Landscape/ground_materials/rock/rock6_weathered_rock_normal.png
+./Assets/Landscape/ground_materials/textures/aerial_rocks_04_diff_4k.jpg
+./Assets/Landscape/ground_materials/textures/aerial_rocks_04_disp_4k.png
+./Assets/Landscape/ground_materials/textures/aerial_rocks_04_rough_4k.jpg
+./Assets/Landscape/ground_materials/textures/forest_ground_04_diff_4k.jpg
+./Assets/Landscape/ground_materials/textures/forest_ground_04_disp_4k.png
+./Assets/Landscape/ground_materials/textures/mountain_albedo.png
+./Assets/Landscape/ground_materials/textures/mountain_heightmap.png
+./Assets/Landscape/ground_materials/textures/mountain_normal.png
+./Assets/Landscape/ground_materials/textures/normal_ground_albedo.png
+./Assets/Landscape/ground_materials/textures/normal_ground_heightmap.png
+./Assets/Landscape/ground_materials/textures/normal_ground_normal.png
+./Assets/Landscape/ground_materials/textures/rock_face_03_diff_4k.jpg
+./Assets/Landscape/ground_materials/textures/rock_face_03_disp_4k.png
+./Assets/Landscape/ground_materials/wild_grass.glb
+./Assets/Landscape/highway_road.blend
+./Assets/Landscape/highway_road_road_texture.png
+./Assets/Landscape/mountain_road.blend
+./Assets/Landscape/mountain_road_road_texture.png
+./Assets/Landscape/Tree/c358c141885cfbd0d2fe5c60f845c19b.png
+./Assets/Landscape/Tree/cutetree_bark.png
+./Assets/Landscape/Tree/cutetree.blend
+./Assets/Landscape/Tree/cutetree_tree_core.png
+./Assets/Landscape/Tree/Douglas/tree_douglas_ash-tree-bark_albedo.png
+./Assets/Landscape/Tree/Douglas/tree_douglas_ash-tree-bark_normal-ogl.png
+./Assets/Landscape/Tree/Douglas/tree_douglas_ash-tree-bark_roughness.png
+./Assets/Landscape/Tree/Douglas/tree_douglas.blend
+./Assets/Landscape/Tree/Douglas/tree_douglas_c358c141885cfbd0d2fe5c60f845c19b.png
+./Assets/Landscape/Tree/f_ing_tree_bark.png
+./Assets/Landscape/Tree/f_ing_tree.blend
+./Assets/Landscape/Tree/f_ing_tree_tree_core.png
+./Assets/Landscape/Tree/foliage_Tree/tree_bark_fallen_bark.png
+./Assets/Landscape/Tree/foliage_Tree/tree_bark_fallen.glb
+./Assets/Landscape/Tree/foliage_Tree/tree_bark_fallen_tree_bark_mat_normal.png
+./Assets/Landscape/Tree/maple/maple_ash-tree-bark_albedo.png
+./Assets/Landscape/Tree/maple/maple.blend
+./Assets/Landscape/Tree/maple/maple_maple.png
+./Assets/Landscape/Tree/vit.blend
+./Assets/Landscape/Tree/vit_gpt.png
+./Assets/Landscape/Tree/vit_tree_bark_mat_albedo.png
+./Assets/Landscape/Tree/vit_tree_bark_mat_normal.png
+./Assets/traffic_prop/cones/orange cone.glb
+./Assets/traffic_prop/no_entry/no_entry.glb
+./Assets/traffic_prop/no_entry/no_entry_no_entry.webp
+./Assets/traffic_prop/speed_signs/speed_lim_90.glb
+./Assets/traffic_prop/speed_signs/speed_lim_90_speed_90.png
+./Assets/traffic_prop/stop_sign/stop.glb
+./Assets/traffic_prop/stop_sign/stop_stop.png
+./Assets/traffic_prop/under_cons/under_cons.glb
+./Assets/traffic_prop/under_cons/under_cons_und_cons.png
+./demo/assets/meshes/Block.obj
+./demo/assets/meshes/Diamond.obj
+./demo/assets/meshes/Gear.obj
+./demo/assets/meshes/Gem.obj
+./demo/assets/meshes/Honey.obj
+./demo/assets/meshes/KnotTorus.obj
+./demo/assets/meshes/RoundCube.obj
+./demo/assets/meshes/Suzanne.obj
+./demo/assets/meshes/Teapot.obj
+./demo/assets/meshes/Torus.obj
+./demo/assets/meshes/Triangle.obj
+./demo/assets/meshes/TwistedTorus.obj
+./demo/assets/textures/ProtGrid0.jpg
+./demo/assets/textures/ProtGrid1.jpg
+./house/bricks_build_brick_2.png
+./house/building_1_brick.png
+./house/building_1_building.png
+./house/building_1.glb
+./house/house_461223129.jpg
+./house/house_front_side.png
+./house/house_garage_door.png
+./house/house_Gemini_Generated_Image_o15p9lo15p9lo15p.png
+./house/house.glb
+./house/house_roof_top_blue.png
+./house/house_window.png
+./house/house_wood_text.jpg
+./house/local_arab_house_Arabian House Cross-Layout Texture Atlas.png
+./house/local_arab_house.blend
+./house/quit_bark.png
+./house/quit.blend
+./house/quit_castle_walls_short.jpg
+./house/quit_old-rusty-wooden-gothic-door-detail-4517054.webp
+./house/quit_scrapstuccowbrickplain.jpg
+./house/structure.blend
+./house/structure_brick.png
+./HTerrain/color.png
+./HTerrain/detail.png
+./HTerrain/global_albedo.png
+./HTerrain/normal.png
+./HTerrain/splat2.png
+./HTerrain/splat3.png
+./HTerrain/splat4.png
+./HTerrain/splat.png
+./push.png
+./Start_albedo_bump_array.png
+./Start_normal_roughness_array.png
+./Start_slot0_albedo_bump.png
+./Start_slot0_normal_roughness.png
+./Start_slot1_albedo_bump.png
+./Start_slot1_normal_roughness.png
+./Start_slot2_albedo_bump.png
+./Start_slot2_normal_roughness.png
+./Start_slot3_albedo_bump.png
+./Start_slot3_normal_roughness.png
