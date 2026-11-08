@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b26onmmbjj08t"
-path="res://.godot/imported/bricks_build.blend-1f286754970bd6744f4c47c6b92222fd.scn"
+uid="uid://vcghunjn2tlv"
+path="res://.godot/imported/local_arab_house.blend-365ae4e3124c5d0572487f8a47db939b.scn"
 
 [deps]
 
-source_file="res://house/bricks_build.blend"
-dest_files=["res://.godot/imported/bricks_build.blend-1f286754970bd6744f4c47c6b92222fd.scn"]
+source_file="res://house/local_arab_house.blend"
+dest_files=["res://.godot/imported/local_arab_house.blend-365ae4e3124c5d0572487f8a47db939b.scn"]
 
 [params]
 

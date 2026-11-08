@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dddwqa8v4gur7"
-path="res://.godot/imported/gothic_house.fbx-6549188a703336db2ccb0faf4283c2d2.scn"
+uid="uid://ikwf2ighafjq"
+path="res://.godot/imported/rock5.glb-be0804f2313115ea61a47accd742e240.scn"
 
 [deps]
 
-source_file="res://house/gothic_house.fbx"
-dest_files=["res://.godot/imported/gothic_house.fbx-6549188a703336db2ccb0faf4283c2d2.scn"]
+source_file="res://Assets/Landscape/ground_materials/rock/rock5.glb"
+dest_files=["res://.godot/imported/rock5.glb-be0804f2313115ea61a47accd742e240.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1
